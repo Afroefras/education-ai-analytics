@@ -5,9 +5,10 @@ name = "pypi"
 
 [packages]
 python-dotenv = "==1.0.0"
+google-generativeai = "==0.8.5"
 
 [dev-packages]
-ipykernel = "*"
+ipykernel = "==6.29.5"
 
 [requires]
 python_version = "3.10"
