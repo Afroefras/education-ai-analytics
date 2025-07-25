@@ -1,7 +1,0 @@
- - Consider the transcript, read it and get the pedagogic metrics defined below in a json format:
-    Open Question Ratio (Conteo de preguntas abiertas del docente hacia los alumnos).
-    Example Count (Número de ejemplos usados para explicar conceptos).
-    Recap Connections (Frecuencia con que el docente recapitula o conecta con clases anteriores).
-    Knowledge Check Prompts (Número de preguntas explícitas para validar entendimiento (“¿todo claro?”, “¿alguna duda hasta aquí?”))
- 
- - From the same transcription, give me in JSON format multiple option questions and the options to check whether the student understand the topic.
