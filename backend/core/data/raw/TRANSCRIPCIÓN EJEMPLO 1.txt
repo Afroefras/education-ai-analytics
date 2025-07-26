@@ -1,0 +1,165 @@
+Transcripción clase: Introducción a Machine Learning  
+Fecha: 12 de marzo de 2025  
+Duración: 1 hora  
+Docente: Dra. Mariana Torres  
+Plataforma: Microsoft Teams  
+Participantes: David, Fernanda, Luis, Natalia, Andrés, Sofía, Raúl, Camila
+
+---
+
+DRA. MARIANA TORRES (0:00)  
+Buenos días, grupo. ¿Ya me escuchan todos? Vamos a iniciar puntual porque hoy tenemos bastante contenido. Vamos a entrarle de lleno a *Machine Learning*, un tema clave si les interesa el análisis de datos, inteligencia artificial o automatización.
+
+FERNANDA (0:15)  
+Sí se escucha profe.
+
+DAVID (0:17)  
+Poquito cortado, pero ya lo arreglé.
+
+DRA. MARIANA TORRES (0:20)  
+Perfecto. Entonces, para empezar, ¿quién me dice qué entiende por aprendizaje automático?
+
+RAÚL (0:32)  
+¿Es como que las máquinas aprenden solas?
+
+DRA. MARIANA TORRES (0:34)  
+Sí, aunque no del todo solas. Nosotros les damos datos y algoritmos, y ellas aprenden patrones. Machine Learning es permitir que una máquina mejore su rendimiento en una tarea específica, sin ser programada de forma directa para cada decisión.
+
+LUIS (0:50)  
+¿Eso es como lo de Netflix que me recomienda series?
+
+DRA. MARIANA TORRES (0:52)  
+Exactamente. Eso es un ejemplo de modelo supervisado. El sistema aprende a partir de lo que viste antes y de los datos de usuarios similares.
+
+CAMILA (1:01)  
+¿Y hay varios tipos de aprendizaje?
+
+DRA. MARIANA TORRES (1:03)  
+Muy bien. Tenemos tres principales: supervisado, no supervisado y por refuerzo. En el primero, el sistema aprende con datos etiquetados. En el segundo, no hay etiquetas, solo encuentra patrones. Y en el tercero, aprende a base de ensayo y error, como si fuera un videojuego.
+
+SOFÍA (1:20)  
+¿El de refuerzo se usa en robots?
+
+DRA. MARIANA TORRES (1:22)  
+Sí, o en sistemas como los autos autónomos. Reciben recompensas o penalizaciones según las decisiones que toman.
+
+NATALIA (1:30)  
+¿Y esos datos deben ser siempre numéricos?
+
+DRA. MARIANA TORRES (1:33)  
+No necesariamente. Pueden ser textos, imágenes, sonidos… pero sí deben ser estructurados o transformables para que el modelo los entienda.
+
+ANDRÉS (1:40)  
+¿Y necesitamos saber matemáticas para esto?
+
+DRA. MARIANA TORRES (1:43)  
+Sí, pero no se asusten. Vamos a ir trabajando con lo esencial: probabilidades, álgebra básica y algo de estadística.
+
+FERNANDA (1:52)  
+Profe, ¿y esos modelos son confiables? ¿No se equivocan?
+
+DRA. MARIANA TORRES (1:55)  
+Buena pregunta. Claro que se equivocan. Un modelo es tan bueno como los datos que se le dan. Si los datos están mal o sesgados, el modelo aprende mal. Hay que validar, ajustar y evaluar siempre.
+
+RAÚL (2:05)  
+¿Y eso de que discriminan es cierto?
+
+DRA. MARIANA TORRES (2:07)  
+Sí. Si el conjunto de datos tiene sesgos raciales, de género o económicos, el modelo los hereda. Ha pasado en procesos de selección, bancos, e incluso sistemas policiales.
+
+SOFÍA (2:15)  
+¿Entonces la IA puede ser injusta?
+
+DRA. MARIANA TORRES (2:17)  
+Sí, por eso hablamos de *IA ética*. Hay que diseñar modelos responsables. Este es un tema cada vez más importante.
+
+DAVID (2:24)  
+Profe, ¿y se puede corregir eso?
+
+DRA. MARIANA TORRES (2:26)  
+Sí, usando filtros, técnicas de reponderación de datos, o auditorías algorítmicas. Pero requiere conciencia desde el diseño.
+
+FERNANDA (2:35)  
+¿Y nos va a quitar el trabajo la IA?
+
+DRA. MARIANA TORRES (2:37)  
+Jajaja, esa es la pregunta del millón. A ver… ¿qué opinan? ¿Sí o no?
+
+CAMILA (2:40)  
+Depende del trabajo, ¿no?
+
+LUIS (2:42)  
+Yo creo que va a reemplazar cosas repetitivas, pero no lo creativo.
+
+RAÚL (2:45)  
+Sí, pero hay empresas que ya no contratan recepcionistas, solo bots.
+
+DRA. MARIANA TORRES (2:48)  
+Eso es cierto. Hay tareas que van desapareciendo, pero también surgen otras nuevas. Quien sepa trabajar con datos, va a tener muchas oportunidades.
+
+NATALIA (2:55)  
+O sea que aprender esto es como una inversión a futuro.
+
+DRA. MARIANA TORRES (2:58)  
+¡Totalmente! Y además es divertido, van a ver.
+
+DRA. MARIANA TORRES (3:05)  
+Vamos a recapitular. ¿Cuáles son los pasos para crear un modelo de Machine Learning?
+
+DAVID (3:08)  
+Recolectar datos.
+
+FERNANDA (3:10)  
+Limpiar los datos.
+
+RAÚL (3:11)  
+Elegir un algoritmo.
+
+NATALIA (3:13)  
+Entrenar y evaluar.
+
+DRA. MARIANA TORRES (3:15)  
+Muy bien, excelente. Eso es. Y recuerden que siempre hay que interpretar los resultados con criterio. El modelo predice, pero el humano decide.
+
+SOFÍA (3:25)  
+¿Y hay que saber programar sí o sí?
+
+DRA. MARIANA TORRES (3:27)  
+Sí, aunque no necesitas ser experta. Con entender bien los pasos y practicar en notebooks de Python es suficiente al inicio.
+
+LUIS (3:33)  
+¿Y vamos a usar librerías?
+
+DRA. MARIANA TORRES (3:35)  
+Claro, como `scikit-learn` o `pandas`, pero primero quiero que comprendan los conceptos.
+
+ANDRÉS (3:38)  
+Profe, ¿nos puede mandar un video complementario?
+
+DRA. MARIANA TORRES (3:40)  
+Sí, se los subo esta noche a Classroom junto con una lectura.
+
+DRA. MARIANA TORRES (3:50)  
+Muy bien chicos. Hoy avanzamos bastante. La próxima sesión haremos un ejercicio paso a paso de regresión lineal. Les dejo de tarea:
+
+1. Leer el artículo “¿Qué es Machine Learning?” (está en Classroom).  
+2. Ver el video de 10 minutos que les subiré.  
+3. Traer una pregunta personal sobre una aplicación de ML.
+
+¿Alguien más con dudas?
+
+FERNANDA (3:58)  
+¿Podemos escribir la pregunta en Teams?
+
+DRA. MARIANA TORRES (4:00)  
+Sí, pueden dejarla ahí o traerla escrita. Lo importante es que sea suya.
+
+RAÚL (4:02)  
+Gracias profe, me gustó la clase.
+
+SOFÍA (4:03)  
+A mí también, aunque sí da miedito jajaja.
+
+DRA. MARIANA TORRES (4:05)  
+¡Jajaja, es normal! Nos vemos el jueves, y gracias por su participación. ¡Chao!
+
