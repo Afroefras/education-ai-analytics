@@ -6,6 +6,9 @@ class Analyzer:
     def __init__(self) -> None:
         self.client = genai.Client()
 
+    def __str__(self) -> str:
+        return "Large Language Model (LLM) to get metrics from a class transcript"
+
     def read_txt(self, path: str) -> str:
         with open(path, 'r', encoding='utf-8') as file:
             return file.read()
@@ -26,7 +29,10 @@ class Analyzer:
         )
 
     def get_json_metrics(self, response) -> dict:
-        return json.loads(response.text)
+        try:
+            return json.loads(response.text)
+        except json.JSONDecodeError:
+            return response.text
 
     def run(self, prompt_path: str, transcript_path: str, model_name: str) -> dict:
         prompt = self.get_prompt(prompt_path)
