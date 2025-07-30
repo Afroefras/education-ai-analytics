@@ -19,3 +19,6 @@ Instrucciones detalladas para la limpieza y formato:
 - Asegúrate de que el flujo de la conversación sea lógico y fácil de seguir.
 5. Tono y estilo:
 - El resultado final debe ser un documento profesional y pulcro, adaptado al contenido y los participantes de la transcripción en crudo.
+
+Transcripción en crudo:
+
