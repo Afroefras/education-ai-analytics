@@ -1,9 +1,11 @@
 from google import genai
 from docx import Document
 
+
 def read_txt(path: str) -> str:
     with open(path, 'r', encoding='utf-8') as file:
         return file.read()
+
 
 def read_docx(path: str) -> str:
     try:
@@ -14,6 +16,39 @@ def read_docx(path: str) -> str:
         return '\n'.join(full_text)
     except Exception as e:
         return f"Error reading docx file: {e}"
+
+
+def save_txt(
+    text_to_save: str,
+    path: Union[str, Path],
+    filename: str,
+    name_suffix: str
+) -> None:
+
+    if isinstance(path, str):
+        path = Path(path)
+    
+    path = path.joinpath(f"{filename}{name_suffix}.txt")
+    
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(text_to_save)
+
+
+def save_json(
+    dict_to_save: str,
+    path: Union[str, Path],
+    filename: str,
+    name_suffix: str
+) -> None:
+
+    if isinstance(path, str):
+        path = Path(path)
+        
+    path = path.joinpath(f"{filename}{name_suffix}.json")
+
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(dict_to_save, f, indent=4)
+
 
 class LLMClass:
     def __init__(self) -> None:
@@ -42,7 +77,3 @@ class LLMClass:
 
     def get_response_text(self, response) -> str:
         return response.text
-
-    def save_txt(self, path: str, text: str) -> None:
-        with open(path, 'w', encoding='utf-8') as f:
-            f.write(text)
