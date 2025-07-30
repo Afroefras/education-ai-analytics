@@ -238,10 +238,12 @@ class Analyzer:
         top_concepts = self.get_top_concepts(metrics, top_n_concepts)
         teaching_style = self.get_teaching_style(metrics)
         questions_examples = self.get_questions_and_examples(metrics)
+        talk_time = self.get_talk_time(metrics)
         
         metrics_dict = {
             'top_concepts': top_concepts,
             'teaching_style': teaching_style,
             'questions_examples': questions_examples,
+            'talk_time': talk_time,
         }
         return metrics_dict
