@@ -1,39 +1,19 @@
 import json
 import collections
-from google import genai
+from core.utils.llm_base import LLMClass
 
-
-class Analyzer:
+class Analyzer(LLMClass):
     def __init__(self) -> None:
-        self.client = genai.Client()
+        super().__init__()
 
     def __str__(self) -> str:
-        return "Large Language Model (LLM) to get metrics from a class transcript"
+        return super().__str__() + ':\nAnalyzer ready!'
 
-    def read_txt(self, path: str) -> str:
-        with open(path, 'r', encoding='utf-8') as file:
-            return file.read()
-
-    def get_prompt(self, prompt_path: str) -> str:
-        return self.read_txt(prompt_path)
-
-    def get_transcript(self, transcript_path: str) -> str:
-        return self.read_txt(transcript_path)
-
-    def make_final_prompt(self, prompt: str, transcript: str) -> str:
-        return prompt + "\n\n" + transcript
-
-    def get_model_response(self, prompt: str, model_name: str):
-        return self.client.models.generate_content(
-            model=model_name,
-            contents=prompt
-        )
-
-    def get_json_metrics(self, response) -> dict:
+    def get_json_metrics(self, response_text) -> dict:
         try:
-            return json.loads(response.text)
+            return json.loads(response_text)
         except json.JSONDecodeError:
-            return response.text
+            return response_text
 
     def get_top_concepts(self, metrics: dict, top_n: int) -> list[dict]:
         """
@@ -231,9 +211,10 @@ class Analyzer:
         prompt = self.get_prompt(prompt_path)
         transcript = self.get_transcript(transcript_path)
         final_prompt = self.make_final_prompt(prompt, transcript)
-
         response = self.get_model_response(final_prompt, model_name)
-        metrics = self.get_json_metrics(response)
+        response_text = self.get_response_text(response)
+
+        metrics = self.get_json_metrics(response_text)
 
         top_concepts = self.get_top_concepts(metrics, top_n_concepts)
         teaching_style = self.get_teaching_style(metrics)
