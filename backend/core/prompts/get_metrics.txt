@@ -56,3 +56,6 @@ Donde:
 
 Importante: La transcripción está delimitada por las marcas de tiempo. Asegúrate de agrupar correctamente el contenido según el minuto cronológico al que pertenece cada intervención. Por ejemplo, una intervención en (0:20) y otra en (0:52) deben ir juntas bajo la llave '0'. Una intervención en (1:01) debe ir bajo la llave '2'. Si un campo no tiene contenido para un minuto específico, el valor correspondiente debe ser una lista o un diccionario vacío (ej. concepts: []) o cero.
 Responde con sólo el JSON final sin formato de identación, tampoco quiero ningún otro texto adicional al JSON.
+
+Transcripción limpia:
+

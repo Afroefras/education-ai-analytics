@@ -1,0 +1,149 @@
+Transcripción clase: Introducción a la Probabilidad  
+Fecha: 26 de marzo de 2025  
+Duración: 1 hora  
+Docente: Mtro. Rodrigo Márquez  
+Plataforma: Microsoft Teams  
+Participantes: Jimena, Rodrigo, Lucía, Marcos, Esteban, Carla, Ingrid, Sergio
+
+---
+
+MTRO. RODRIGO MÁRQUEZ (0:00)  
+Buenos días, chicos. Ya estamos en hora. Si me escuchan bien, vamos a comenzar con nuestro tema de hoy: *probabilidad básica*. Esta clase es clave porque es la base para todo tipo de análisis de incertidumbre, desde juegos hasta predicciones financieras.
+
+JIMENA (0:14)  
+Sí, se escucha claro, profe.
+
+RODRIGO (0:15)  
+Yo igual, todo bien.
+
+MTRO. RODRIGO MÁRQUEZ (0:17)  
+Perfecto. Entonces, empecemos con una pregunta sencilla: ¿qué creen que significa “probabilidad”?
+
+MARCOS (0:23)  
+Pues… como la posibilidad de que algo pase, ¿no?
+
+MTRO. RODRIGO MÁRQUEZ (0:25)  
+Muy bien. Es una forma de expresar qué tan probable es que ocurra un evento. Lo usamos todo el tiempo sin darnos cuenta. Por ejemplo, cuando decimos “yo creo que sí va a llover” o “seguro me toca examen”, estamos haciendo estimaciones basadas en lo que sabemos.
+
+LUCÍA (0:36)  
+Sí, como cuando apostamos o jugamos algo.
+
+MTRO. RODRIGO MÁRQUEZ (0:38)  
+Exacto. Y lo que buscamos con la probabilidad matemática es ponerle un número a esa intuición. Vamos a ver algunos conceptos clave. El primero es “experimento aleatorio”. ¿Alguien ha escuchado ese término?
+
+CARLA (0:48)  
+¿Es como un experimento donde no se sabe qué va a pasar?
+
+MTRO. RODRIGO MÁRQUEZ (0:50)  
+Correcto. Es una acción que podemos repetir y cuyo resultado no se puede predecir con certeza. Por ejemplo, lanzar un dado.
+
+ESTEBAN (0:58)  
+Los posibles resultados serían uno, dos, tres, cuatro, cinco y seis.
+
+MTRO. RODRIGO MÁRQUEZ (1:00)  
+Muy bien. Ese conjunto se llama “espacio muestral”. Son todos los resultados que pueden pasar. Y cada uno de esos se llama “evento simple”.
+
+MTRO. RODRIGO MÁRQUEZ (1:10)  
+Ahora sí, ¿cómo calculamos la probabilidad de que pase algo? Se cuenta cuántos resultados nos sirven, y se divide entre todos los resultados posibles. Por ejemplo, si quiero saber qué tan probable es sacar un tres al lanzar el dado…
+
+SERGIO (1:14)  
+Solo hay un tres entre los seis, ¿no?
+
+MTRO. RODRIGO MÁRQUEZ (1:16)  
+Exactamente. Entonces la probabilidad es uno entre seis. Eso equivale más o menos a diecisiete por ciento.
+
+INGRID (1:20)  
+¿Y si quiero sacar un número par?
+
+MTRO. RODRIGO MÁRQUEZ (1:22)  
+Muy buena pregunta. En el dado los pares son el dos, el cuatro y el seis. Entonces hay tres casos que nos sirven de un total de seis. Esa probabilidad sería de tres entre seis, que es igual a la mitad.
+
+JIMENA (1:30)  
+Profe, ¿y si lanzo dos dados al mismo tiempo?
+
+MTRO. RODRIGO MÁRQUEZ (1:32)  
+Ahí cambia todo. Porque los posibles resultados ahora son combinaciones. Cada dado tiene seis caras, entonces hay treinta y seis combinaciones posibles. Porque seis por seis es treinta y seis.
+
+RODRIGO (1:38)  
+¿Y si quiero saber la probabilidad de que salga un siete?
+
+MTRO. RODRIGO MÁRQUEZ (1:40)  
+Buena. Vamos a contar: uno con seis, dos con cinco, tres con cuatro, cuatro con tres, cinco con dos, seis con uno. Hay seis formas distintas de sumar siete.
+
+LUCÍA (1:45)  
+O sea seis de treinta y seis.
+
+MTRO. RODRIGO MÁRQUEZ (1:47)  
+Correcto. Eso da uno entre seis, o diecisiete por ciento otra vez. Curioso, ¿no?
+
+MTRO. RODRIGO MÁRQUEZ (1:55)  
+Ahora vamos con otro concepto importante: eventos complementarios. Si tengo la probabilidad de que algo ocurra, entonces la probabilidad de que no ocurra es simplemente uno menos ese valor.
+
+MARCOS (2:00)  
+¿Como si hay treinta por ciento de que llueva, entonces setenta por ciento de que no?
+
+MTRO. RODRIGO MÁRQUEZ (2:02)  
+Exactamente. Muy bien dicho. Esto es útil cuando calcular lo que no pasa es más fácil que calcular lo que sí pasa.
+
+CARLA (2:10)  
+¿Y cómo se suman probabilidades?
+
+MTRO. RODRIGO MÁRQUEZ (2:11)  
+Buena pregunta. Si dos eventos no pueden pasar al mismo tiempo, como sacar un dos o un cinco en el mismo lanzamiento, entonces se pueden sumar. Por ejemplo, la probabilidad de sacar un dos o un cuatro sería uno entre seis más uno entre seis, eso da dos entre seis, o un tercio.
+
+INGRID (2:22)  
+¿Y si pueden pasar al mismo tiempo?
+
+MTRO. RODRIGO MÁRQUEZ (2:24)  
+Ahí cambia. Si hay posibilidad de que pasen juntos, como ser mujer y ser estudiante, hay que tener cuidado. Ya no se suman así nomás. Más adelante veremos cómo se calcula eso.
+
+ESTEBAN (2:30)  
+Profe, me estoy confundiendo con eso de “al mismo tiempo”.
+
+MTRO. RODRIGO MÁRQUEZ (2:32)  
+Es normal. Mira, si hablamos de lanzar una moneda y un dado, pueden pasar cosas distintas al mismo tiempo. Por ejemplo, sacar cara y un cinco. Como no se afectan entre sí, se dice que son independientes. Y en esos casos, se multiplican las probabilidades.
+
+SERGIO (2:42)  
+¿Entonces si cada uno tiene mitad de probabilidad, la probabilidad conjunta es un cuarto?
+
+MTRO. RODRIGO MÁRQUEZ (2:44)  
+Sí, muy bien. Cincuenta por ciento por cincuenta por ciento da veinticinco por ciento.
+
+JIMENA (2:50)  
+¿Y eso de los casinos es real? ¿Que todo está diseñado con probabilidad?
+
+MTRO. RODRIGO MÁRQUEZ (2:52)  
+Completamente real. Ellos calculan los juegos para tener una ventaja matemática. Por ejemplo, en la ruleta, aunque parezca que hay las mismas chances de ganar, siempre hay un espacio extra, el cero o el doble cero, que les da ventaja.
+
+MTRO. RODRIGO MÁRQUEZ (3:00)  
+Bueno chicos, vamos cerrando. Hoy vimos varios conceptos: qué es un experimento aleatorio, cómo se calcula la probabilidad básica, qué son los eventos complementarios, la diferencia entre eventos mutuamente excluyentes e independientes, y cómo aplicar eso en ejemplos cotidianos.
+
+LUCÍA (3:10)  
+Profe, ¿vamos a hacer ejercicios de esto?
+
+MTRO. RODRIGO MÁRQUEZ (3:11)  
+Sí, claro. En la siguiente clase vamos a resolver varios ejemplos juntos, pero mientras tanto les dejo una actividad:
+
+Uno: escojan un juego de azar, puede ser dados, monedas o ruleta.  
+Dos: escriban qué resultados posibles tiene ese juego.  
+Tres: elijan un evento y calculen la probabilidad.  
+Cuatro: expliquen en dos renglones cómo llegaron al resultado.
+
+RODRIGO (3:20)  
+¿Lo subimos a Classroom?
+
+MTRO. RODRIGO MÁRQUEZ (3:21)  
+Sí, tienen hasta el viernes.
+
+CARLA (3:23)  
+¿Puede ser un juego de cartas?
+
+MTRO. RODRIGO MÁRQUEZ (3:24)  
+También, pero intenten hacerlo con un evento simple, como sacar un as o un rey.
+
+MARCOS (3:26)  
+Gracias profe, me gustó cómo lo explicó.
+
+MTRO. RODRIGO MÁRQUEZ (3:28)  
+Gracias, Marcos. Nos vemos la próxima semana y si tienen dudas me escriben por Teams. ¡Buen día!
+
