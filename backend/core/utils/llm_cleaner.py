@@ -12,6 +12,7 @@ class Cleaner(LLMClass):
         prompt_path: str,
         transcript_path: str,
         model_name: str,
+        save_path: str=None,
     ) -> str:
 
         prompt = self.get_prompt(prompt_path)
@@ -19,5 +20,8 @@ class Cleaner(LLMClass):
         final_prompt = self.make_final_prompt(prompt, transcript)
         response = self.get_model_response(final_prompt, model_name)
         response_text = self.get_response_text(response)
+
+        if save_path:
+            self.save_txt(save_path, response_text)
 
         return response_text
