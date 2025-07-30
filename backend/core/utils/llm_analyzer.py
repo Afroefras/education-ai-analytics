@@ -1,6 +1,6 @@
 import json
 import collections
-from core.utils.llm_base import LLMClass
+from core.utils.llm_base import LLMClass, save_json
 
 class Analyzer(LLMClass):
     def __init__(self) -> None:
@@ -207,6 +207,8 @@ class Analyzer(LLMClass):
         model_name: str,
         top_n_concepts: int=10,
         save_path: str=None,
+        filename_to_save: str='transcript',
+        name_suffix: str="__metrics"
     ) -> dict:
 
         prompt = self.get_prompt(prompt_path)
@@ -230,6 +232,6 @@ class Analyzer(LLMClass):
         }
 
         if save_path:
-            self.save_txt(save_path, metrics_dict)
+            save_json(metrics_dict, save_path, filename_to_save, name_suffix)
 
         return metrics_dict
