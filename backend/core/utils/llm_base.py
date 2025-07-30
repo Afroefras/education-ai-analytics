@@ -42,3 +42,7 @@ class LLMClass:
 
     def get_response_text(self, response) -> str:
         return response.text
+
+    def save_txt(self, path: str, text: str) -> None:
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(text)
