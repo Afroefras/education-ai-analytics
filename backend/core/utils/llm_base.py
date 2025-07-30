@@ -39,3 +39,6 @@ class LLMClass:
             model=model_name,
             contents=prompt
         )
+
+    def get_response_text(self, response) -> str:
+        return response.text
