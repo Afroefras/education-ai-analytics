@@ -1,6 +1,6 @@
 import json
 import collections
-from core.utils.llm_base import LLMClass
+from core.utils.llm_base import LLMClass, save_json
 
 class Analyzer(LLMClass):
     def __init__(self) -> None:
@@ -10,10 +10,7 @@ class Analyzer(LLMClass):
         return super().__str__() + ':\nAnalyzer ready!'
 
     def get_json_metrics(self, response_text) -> dict:
-        try:
-            return json.loads(response_text)
-        except json.JSONDecodeError:
-            return response_text
+        return json.loads(response_text)
 
     def get_top_concepts(self, metrics: dict, top_n: int) -> list[dict]:
         """
@@ -205,7 +202,10 @@ class Analyzer(LLMClass):
         prompt_path: str,
         transcript_path: str,
         model_name: str,
-        top_n_concepts: int=10
+        top_n_concepts: int=10,
+        save_path: str=None,
+        filename_to_save: str='transcript',
+        name_suffix: str="__metrics"
     ) -> dict:
 
         prompt = self.get_prompt(prompt_path)
@@ -227,4 +227,8 @@ class Analyzer(LLMClass):
             'questions_examples': questions_examples,
             'talk_time': talk_time,
         }
+
+        if save_path:
+            save_json(metrics_dict, save_path, filename_to_save, name_suffix)
+
         return metrics_dict
