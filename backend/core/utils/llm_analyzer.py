@@ -10,10 +10,7 @@ class Analyzer(LLMClass):
         return super().__str__() + ':\nAnalyzer ready!'
 
     def get_json_metrics(self, response_text) -> dict:
-        try:
-            return json.loads(response_text)
-        except json.JSONDecodeError:
-            return response_text
+        return json.loads(response_text)
 
     def get_top_concepts(self, metrics: dict, top_n: int) -> list[dict]:
         """
