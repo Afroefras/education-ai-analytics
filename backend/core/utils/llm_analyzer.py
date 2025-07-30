@@ -9,11 +9,11 @@ class Analyzer(LLMClass):
     def __str__(self) -> str:
         return super().__str__() + ':\nAnalyzer ready!'
 
-    def get_json_metrics(self, response) -> dict:
+    def get_json_metrics(self, response_text) -> dict:
         try:
-            return json.loads(response.text)
+            return json.loads(response_text)
         except json.JSONDecodeError:
-            return response.text
+            return response_text
 
     def get_top_concepts(self, metrics: dict, top_n: int) -> list[dict]:
         """
@@ -211,9 +211,10 @@ class Analyzer(LLMClass):
         prompt = self.get_prompt(prompt_path)
         transcript = self.get_transcript(transcript_path)
         final_prompt = self.make_final_prompt(prompt, transcript)
-
         response = self.get_model_response(final_prompt, model_name)
-        metrics = self.get_json_metrics(response)
+        response_text = self.get_response_text(response)
+
+        metrics = self.get_json_metrics(response_text)
 
         top_concepts = self.get_top_concepts(metrics, top_n_concepts)
         teaching_style = self.get_teaching_style(metrics)
