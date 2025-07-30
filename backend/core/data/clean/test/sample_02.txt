@@ -1,0 +1,170 @@
+Transcripción clase: Fundamentos de Estadística  
+Fecha: 19 de marzo de 2025  
+Duración: 1 hora  
+Docente: Mtra. Alejandra Ríos  
+Plataforma: Microsoft Teams  
+Participantes: Mateo, Diana, Valeria, Joaquín, Laura, Samuel, Abril, Tomás
+
+---
+
+MTRA. ALEJANDRA RÍOS (0:00)  
+Hola, hola, ¿me escuchan? ¿Ya están todos por aquí? Vamos a comenzar. Recuerden que esta clase es base para muchas materias que verán más adelante, especialmente si van hacia análisis de datos o investigación.
+
+DIANA (0:12)  
+Sí se escucha, maestra.
+
+MATEO (0:13)  
+Yo también ya estoy conectado.
+
+MTRA. ALEJANDRA RÍOS (0:15)  
+Perfecto. Hoy vamos a hablar de los conceptos fundamentales de la estadística. Pero antes de arrancar, quiero saber: ¿qué palabra les viene a la mente cuando escuchan “estadística”?
+
+VALERIA (0:25)  
+Números... muchos números.
+
+JOAQUÍN (0:27)  
+Porcentajes, encuestas, tal vez.
+
+LAURA (0:29)  
+Gráficas.
+
+MTRA. ALEJANDRA RÍOS (0:31)  
+Exactamente. Estadística no solo es números, es también interpretación. Es una herramienta para tomar decisiones a partir de datos. Vamos con la primera distinción importante: ¿alguien ha escuchado hablar de estadística descriptiva y estadística inferencial?
+
+SAMUEL (0:45)  
+No muy bien, la verdad.
+
+ABRIL (0:47)  
+¿La descriptiva es la que organiza datos?
+
+MTRA. ALEJANDRA RÍOS (0:49)  
+Sí, bien. La estadística descriptiva resume, organiza y presenta la información: gráficos, medias, tablas. En cambio, la inferencial hace generalizaciones, predicciones, saca conclusiones sobre una población con base en una muestra.
+
+TOMÁS (1:00)  
+¿Eso es como cuando hacen encuestas y dicen “el 70% de los mexicanos piensa que…”?
+
+MTRA. ALEJANDRA RÍOS (1:03)  
+¡Exactamente! Pero no encuestaron a todos los mexicanos, ¿cierto? Solo a una muestra. Y eso nos lleva a otro punto clave: la diferencia entre población y muestra. ¿Quién se anima?
+
+DIANA (1:13)  
+Población es el total y muestra es una parte.
+
+MTRA. ALEJANDRA RÍOS (1:15)  
+Perfecto. Si yo quisiera saber el promedio de edad de todos los estudiantes de la universidad, idealmente analizaría la población completa. Pero como no es práctico, saco una muestra representativa.
+
+MATEO (1:25)  
+¿Y cómo se elige esa muestra?
+
+MTRA. ALEJANDRA RÍOS (1:28)  
+Buena pregunta. Hay muchas formas. Puede ser aleatoria simple, estratificada, sistemática, por conglomerados. No se preocupen, hoy solo veremos la aleatoria. Lo importante es que todos los elementos tengan la misma probabilidad de ser seleccionados.
+
+LAURA (1:40)  
+Profe, ¿y si una muestra está mal elegida?
+
+MTRA. ALEJANDRA RÍOS (1:42)  
+Pues tus conclusiones serán poco confiables. Por eso el muestreo es tan importante. Si solo encuesto a estudiantes de primer semestre, pero quiero hablar de toda la universidad… estoy sesgando.
+
+MTRA. ALEJANDRA RÍOS (1:50)  
+Ahora, medidas de tendencia central. ¿Les suena? Media, mediana, moda.
+
+VALERIA (1:53)  
+La media es el promedio, ¿no?
+
+MTRA. ALEJANDRA RÍOS (1:55)  
+Correcto. Sumas todos los datos y divides entre la cantidad. ¿Y la mediana?
+
+TOMÁS (1:58)  
+El dato de en medio, si están ordenados.
+
+MTRA. ALEJANDRA RÍOS (2:00)  
+Muy bien. Y la moda es el valor que más se repite. Les voy a decir un ejemplo: edades de un grupo – 17, 18, 18, 19, 20. ¿Cuál es la media?
+
+SAMUEL (2:10)  
+A ver... sumamos: 17 + 18 + 18 + 19 + 20 = 92, entre 5... da 18.4.
+
+MTRA. ALEJANDRA RÍOS (2:14)  
+Correcto. ¿Y la mediana?
+
+LAURA (2:15)  
+El número de en medio es el tercero: 18.
+
+MTRA. ALEJANDRA RÍOS (2:17)  
+Y la moda también es 18, porque se repite dos veces. Excelente. Ahora, ¿estas medidas siempre son iguales?
+
+JOAQUÍN (2:21)  
+No, a veces la media se va por un dato raro.
+
+MTRA. ALEJANDRA RÍOS (2:23)  
+Muy bien observado. Esos datos “raros” se llaman atípicos o *outliers*.
+
+ABRIL (2:30)  
+Profe, ¿y cuál usamos entonces? ¿Media o mediana?
+
+MTRA. ALEJANDRA RÍOS (2:32)  
+Depende. Si tienes una distribución simétrica y sin valores extremos, la media es muy útil. Pero si hay outliers, mejor la mediana.
+
+DIANA (2:40)  
+¿Y eso se ve en una gráfica?
+
+MTRA. ALEJANDRA RÍOS (2:42)  
+Sí, por ejemplo, en un histograma o caja y bigotes. Pero eso lo vemos más adelante.
+
+MTRA. ALEJANDRA RÍOS (2:50)  
+Ahora vamos con la variabilidad. Saber el promedio está bien, pero... ¿todos están cerca del promedio o hay mucha dispersión?
+
+MATEO (2:56)  
+¿Eso es la desviación estándar?
+
+MTRA. ALEJANDRA RÍOS (2:58)  
+¡Exacto! La desviación estándar mide cuánto se alejan los datos de la media. Cuanto más pequeña, más homogéneos son los datos. Si es grande, hay más variación.
+
+JOAQUÍN (3:05)  
+Profe, eso me cuesta entenderlo.
+
+MTRA. ALEJANDRA RÍOS (3:07)  
+Mira, si todos sacaron entre 8.5 y 9.5, la desviación es pequeña. Pero si uno sacó 10, otro 6 y otro 4, la media puede ser 6.7, pero los datos están muy dispersos. Eso es lo que mide la desviación.
+
+SAMUEL (3:16)  
+¿Y cómo se calcula?
+
+MTRA. ALEJANDRA RÍOS (3:18)  
+Con una fórmula, sí. Pero tranquilos, la vamos a hacer con ejemplos. Lo importante hoy es el concepto.
+
+TOMÁS (3:25)  
+¿Y la estadística puede mentir?
+
+MTRA. ALEJANDRA RÍOS (3:27)  
+Buena pregunta. No es que mienta, pero sí puede manipularse. Por eso es clave saber leer los gráficos, revisar la fuente, ver qué datos se usaron y cómo se presentaron.
+
+VALERIA (3:35)  
+Como cuando ponen un gráfico y parece que todo bajó, pero el eje empieza en 90.
+
+MTRA. ALEJANDRA RÍOS (3:38)  
+Exacto. Eso es manipulación visual. Por eso los estadísticos también deben ser éticos.
+
+MTRA. ALEJANDRA RÍOS (3:45)  
+Muy bien, chicos. Hoy vimos bastante: conceptos básicos, medidas de tendencia, dispersión y ejemplos. No se preocupen si hay cosas que no quedaron claras. Vamos a repetir todo con práctica.
+
+DIANA (3:53)  
+¿Nos deja tarea?
+
+MTRA. ALEJANDRA RÍOS (3:54)  
+Sí, pero sencilla:  
+1. Lean las páginas 10 a 20 del cuadernillo.  
+2. Saquen media, mediana y moda de 5 datos personales (puede ser calificaciones, horas de sueño, etc.)  
+3. Traigan una gráfica que hayan visto esta semana y expliquen qué información transmite.
+
+MATEO (4:03)  
+¿Podemos hacerla en Excel?
+
+MTRA. ALEJANDRA RÍOS (4:04)  
+Claro, pueden usar Excel o a mano, lo que prefieran.
+
+LAURA (4:05)  
+Gracias maestra, me gustó la clase.
+
+ABRIL (4:06)  
+Yo me enredé un poco, pero estuvo bien.
+
+MTRA. ALEJANDRA RÍOS (4:08)  
+No te preocupes Abril, es normal. Ya verás que con práctica lo dominarás. Nos vemos la próxima semana. ¡Buen día a todos!
