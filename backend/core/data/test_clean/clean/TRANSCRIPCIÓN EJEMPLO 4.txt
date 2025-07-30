@@ -1,0 +1,126 @@
+Transcripción clase: Introducción a la Contabilidad Financiera  
+Fecha: 2 de abril de 2025  
+Duración: 1 hora  
+Docente: Contador Público Enrique Morales  
+Plataforma: Microsoft Teams  
+Participantes: Andrea, Jorge, Daniela, Martín, Paulina, Iván, Brenda, Mauricio
+
+---
+
+CONTADOR ENRIQUE MORALES (0:00)  
+Buenos días a todos. Les pido que tengan a la mano su cuadernillo, una calculadora si pueden, y que apaguen sus micrófonos mientras no participen para mantener el orden. Hoy vamos a ver la introducción a la contabilidad financiera. Es una clase clave para entender el lenguaje de los negocios.
+
+ANDREA (0:12)  
+Buen día, profe.
+
+JORGE (0:13)  
+Aquí estamos, maestro.
+
+CONTADOR ENRIQUE MORALES (0:15)  
+Gracias. Arranquemos entonces con una definición básica: ¿Qué es la contabilidad? A ver, ¿alguien quiere participar?
+
+DANIELA (0:22)  
+Es como un registro de lo que gana y gasta una empresa, ¿no?
+
+CONTADOR ENRIQUE MORALES (0:25)  
+Muy bien, Daniela. Es un sistema de información que identifica, clasifica, registra y comunica las operaciones financieras de una entidad económica. La idea es tener información útil para tomar decisiones.
+
+CONTADOR ENRIQUE MORALES (0:35)  
+Ahora, hay varios tipos de contabilidad. Hoy veremos la contabilidad financiera. Esta se enfoca en generar informes como el balance general y el estado de resultados. ¿Han escuchado estos términos antes?
+
+MARTÍN (0:45)  
+Sí, pero no sé bien qué significan.
+
+CONTADOR ENRIQUE MORALES (0:47)  
+No te preocupes. Lo vamos a ver. El balance general muestra qué tiene y qué debe una empresa en un momento específico. Es como una fotografía financiera. El estado de resultados muestra si ganó o perdió en un periodo determinado. Ese es más como un video.
+
+CONTADOR ENRIQUE MORALES (1:00)  
+Vamos con la fórmula básica de la contabilidad. Esto se lo tienen que aprender de memoria:  
+El activo es igual al pasivo más el capital.
+
+PAULINA (1:07)  
+¿Y eso qué significa?
+
+CONTADOR ENRIQUE MORALES (1:09)  
+Activo es todo lo que tiene la empresa: dinero, muebles, inventarios, cuentas por cobrar.  
+Pasivo es lo que debe: préstamos, deudas, cuentas por pagar.  
+Capital es lo que le pertenece a los socios o accionistas.
+
+IVÁN (1:20)  
+O sea que si tengo cien mil en activos y debo sesenta mil, el capital es cuarenta mil.
+
+CONTADOR ENRIQUE MORALES (1:22)  
+Exactamente. Esa es la lógica del balance. Todo debe cuadrar.
+
+CONTADOR ENRIQUE MORALES (1:30)  
+Vamos a hacer un ejemplo muy básico. Supongan que abren una papelería. Invierten veinte mil pesos de su propio dinero. ¿Qué tenemos?
+
+BRENDA (1:35)  
+Capital de veinte mil.
+
+CONTADOR ENRIQUE MORALES (1:37)  
+Correcto. Ese dinero va al activo en forma de efectivo, y también aparece en el capital.
+
+MAURICIO (1:40)  
+¿Y si pido un préstamo de diez mil?
+
+CONTADOR ENRIQUE MORALES (1:42)  
+Entonces aumentas tu efectivo a treinta mil, pero ahora tienes diez mil de pasivo y veinte mil de capital. Sigue cuadrando: treinta mil de activo es igual a diez mil de pasivo más veinte mil de capital.
+
+CONTADOR ENRIQUE MORALES (1:50)  
+Ahora, la contabilidad no solo muestra números. También los registra de manera ordenada. Aquí entra el concepto de partida doble. Toda operación afecta al menos dos cuentas.
+
+ANDREA (1:57)  
+¿Como una entrada y una salida?
+
+CONTADOR ENRIQUE MORALES (1:59)  
+No exactamente. Se trata de débitos y créditos. Por ejemplo, si compras mercancía pagando en efectivo, aumentas inventario en el debe y disminuyes caja en el haber. Siempre hay equilibrio.
+
+JORGE (2:08)  
+¿Y si es a crédito?
+
+CONTADOR ENRIQUE MORALES (2:10)  
+Entonces aumentas inventario y aumentas cuentas por pagar. Aun así se mantiene la igualdad contable.
+
+DANIELA (2:20)  
+Profe, me confundí. ¿El capital también es pasivo?
+
+CONTADOR ENRIQUE MORALES (2:23)  
+Buena duda. No. El capital forma parte del patrimonio de la empresa. El pasivo es lo que se debe a terceros. La confusión viene porque ambos son fuentes de financiamiento: uno es interno, el capital, y otro externo, el pasivo.
+
+CONTADOR ENRIQUE MORALES (2:35)  
+Pasemos a los principios contables. No basta con registrar, hay reglas. Por ejemplo, el principio de entidad económica dice que la empresa es distinta del dueño.  
+El principio de devengación establece que los ingresos y gastos se reconocen cuando ocurren, no cuando se pagan.
+
+PAULINA (2:47)  
+¿Eso no se llama acumulación?
+
+CONTADOR ENRIQUE MORALES (2:49)  
+Exactamente. En contabilidad se registran los hechos económicos, no necesariamente los flujos de efectivo.
+
+CONTADOR ENRIQUE MORALES (2:55)  
+Bien. Para no saturarlos, hoy vimos:
+
+Uno: qué es contabilidad financiera  
+Dos: la fórmula contable  
+Tres: balance general  
+Cuatro: partida doble  
+Cinco: principios contables
+
+MARTÍN (3:05)  
+¿Nos deja ejercicios?
+
+CONTADOR ENRIQUE MORALES (3:06)  
+Sí. En la carpeta de Teams subí una hoja con tres ejercicios simples de balance general. Van a llenarlos con sus propias cifras y subirlos antes del viernes.
+
+MAURICIO (3:12)  
+¿Pueden ser inventadas?
+
+CONTADOR ENRIQUE MORALES (3:14)  
+Sí, la idea es que practiquen el formato, no que los datos sean reales.
+
+ANDREA (3:15)  
+Gracias, profe. Fue muy clara la clase.
+
+CONTADOR ENRIQUE MORALES (3:16)  
+Gracias, Andrea. Y recuerden, contabilidad no es solo para contadores. Es fundamental para cualquier profesión relacionada con finanzas, empresas o economía.
