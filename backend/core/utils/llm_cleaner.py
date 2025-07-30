@@ -1,4 +1,4 @@
-from core.utils.llm_base import LLMClass
+from core.utils.llm_base import LLMClass, save_txt
 
 class Cleaner(LLMClass):
     def __init__(self) -> None:
@@ -13,6 +13,8 @@ class Cleaner(LLMClass):
         transcript_path: str,
         model_name: str,
         save_path: str=None,
+        filename_to_save: str='transcript',
+        name_suffix: str="__clean"
     ) -> str:
 
         prompt = self.get_prompt(prompt_path)
@@ -22,6 +24,6 @@ class Cleaner(LLMClass):
         response_text = self.get_response_text(response)
 
         if save_path:
-            self.save_txt(save_path, response_text)
+            save_txt(response_text, save_path, filename_to_save, name_suffix)
 
         return response_text
