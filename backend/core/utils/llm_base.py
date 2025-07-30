@@ -1,3 +1,6 @@
+import json
+from typing import Union
+from pathlib import Path
 from google import genai
 from docx import Document
 
