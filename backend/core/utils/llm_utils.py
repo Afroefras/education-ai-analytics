@@ -35,12 +35,12 @@ class Analyzer:
         except json.JSONDecodeError:
             return response.text
 
-    def get_top_concepts(self, full_json: dict, top_n: int) -> list[dict]:
+    def get_top_concepts(self, metrics: dict, top_n: int) -> list[dict]:
         """
         Analiza el JSON completo de la transcripción y devuelve los conceptos más frecuentes.
 
         Args:
-            full_json (dict): El diccionario que contiene el análisis minuto a minuto de la clase.
+            metrics (dict): El diccionario que contiene el análisis minuto a minuto de la clase.
             top_n (int, optional): El número de conceptos top a devolver. Por defecto es 10.
 
         Returns:
@@ -51,7 +51,7 @@ class Analyzer:
         all_concepts = []
         
         # 1. Recorrer cada minuto en el JSON y recolectar todos los conceptos.
-        for minute_data in full_json.values():
+        for minute_data in metrics.values():
             if 'concepts' in minute_data and isinstance(minute_data['concepts'], list):
                 all_concepts.extend(minute_data['concepts'])
                 
@@ -74,7 +74,16 @@ class Analyzer:
         
         return top_concepts
 
-    def get_teaching_style(self, full_json: dict) -> dict:
+    def time_to_seconds(self, time_str: str) -> int:
+        """Función de ayuda para convertir un string "MM:SS" a segundos."""
+        try:
+            minutes, seconds = map(int, time_str.split(':'))
+            return (minutes * 60) + seconds
+        except (ValueError, AttributeError):
+            # Devuelve 0 si el formato es incorrecto o el valor es nulo
+            return 0
+
+    def get_teaching_style(self, metrics: dict) -> dict:
         """
         Calcula la distribución general del estilo de enseñanza a lo largo de toda la clase.
 
@@ -82,21 +91,12 @@ class Analyzer:
         de habla del profesor en ese minuto como el peso.
 
         Args:
-            full_json (dict): El diccionario que contiene el análisis minuto a minuto.
+            metrics (dict): El diccionario que contiene el análisis minuto a minuto.
 
         Returns:
             dict: Un diccionario con los porcentajes finales para cada estilo.
                 Ejemplo: {'questioning': 0.25, 'explanation': 0.65, ...}
         """
-        
-        def time_to_seconds(time_str: str) -> int:
-            """Helper function to convert MM:SS string to seconds."""
-            try:
-                minutes, seconds = map(int, time_str.split(':'))
-                return (minutes * 60) + seconds
-            except (ValueError, AttributeError):
-                return 0
-
         # Inicializa acumuladores para los valores ponderados y el tiempo total
         weighted_styles = {
             "questioning": 0.0,
@@ -107,12 +107,12 @@ class Analyzer:
         total_professor_talk_time = 0
 
         # 1. Recorrer cada minuto para acumular los valores ponderados
-        for minute_data in full_json.values():
+        for minute_data in metrics.values():
             style = minute_data.get('teaching_style', {})
             talk_time = minute_data.get('talk_time', {})
             
             # Obtiene el tiempo de habla del profesor en segundos (el peso)
-            professor_seconds = time_to_seconds(talk_time.get('professor'))
+            professor_seconds = self.time_to_seconds(talk_time.get('professor'))
             
             if professor_seconds > 0:
                 total_professor_talk_time += professor_seconds
@@ -131,13 +131,13 @@ class Analyzer:
             
         return teaching_style
 
-    def get_questions_and_examples(self, full_json: dict) -> list[dict]:
+    def get_questions_and_examples(self, metrics: dict) -> list[dict]:
         """
         Crea una serie temporal con el número de preguntas (separadas por profesor y
         estudiante) y ejemplos por minuto.
 
         Args:
-            full_json (dict): El diccionario que contiene el análisis minuto a minuto.
+            metrics (dict): El diccionario que contiene el análisis minuto a minuto.
 
         Returns:
             list[dict]: Una lista de diccionarios, cada uno representando un minuto.
@@ -147,10 +147,10 @@ class Analyzer:
         
         # Ordenar por la llave del minuto para asegurar el orden cronológico
         # Las llaves son strings ('0', '1', ...), se convierten a int para ordenar
-        sorted_minutes = sorted(full_json.keys(), key=int)
+        sorted_minutes = sorted(metrics.keys(), key=int)
 
         for minute_key in sorted_minutes:
-            minute_data = full_json[minute_key]
+            minute_data = metrics[minute_key]
             
             try:
                 # Obtener las preguntas del profesor y de los estudiantes por separado
@@ -178,6 +178,47 @@ class Analyzer:
                 })
                 
         return questions_examples
+
+    def get_talk_time(self, metrics: dict) -> list[dict]:
+        """
+        Crea una serie temporal con la distribución del tiempo de habla por minuto.
+
+        Args:
+            metrics (dict): El diccionario que contiene el análisis minuto a minuto.
+
+        Returns:
+            list[dict]: Una lista de diccionarios, cada uno representando un minuto con
+                        los porcentajes de tiempo de habla.
+                        Ejemplo: [{"minute": 0, "professor_percentage": 0.85, "student_percentage": 0.15}, ...]
+        """
+        talk_time_series = []
+        
+        # Ordenar por la llave del minuto para asegurar el orden cronológico
+        sorted_minutes = sorted(metrics.keys(), key=int)
+
+        for minute_key in sorted_minutes:
+            minute_data = metrics[minute_key]
+            talk_time = minute_data.get('talk_time', {})
+            
+            professor_seconds = self.time_to_seconds(talk_time.get('professor'))
+            student_seconds = self.time_to_seconds(talk_time.get('students'))
+            
+            total_seconds = professor_seconds + student_seconds
+            
+            if total_seconds > 0:
+                prof_percentage = round(professor_seconds / total_seconds, 4)
+                stud_percentage = round(student_seconds / total_seconds, 4)
+            else:
+                prof_percentage = 0.0
+                stud_percentage = 0.0
+                
+            talk_time_series.append({
+                "minute": int(minute_key),
+                "professor_percentage": prof_percentage,
+                "student_percentage": stud_percentage
+            })
+                
+        return talk_time_series
 
     def run(
         self,
