@@ -205,7 +205,8 @@ class Analyzer(LLMClass):
         prompt_path: str,
         transcript_path: str,
         model_name: str,
-        top_n_concepts: int=10
+        top_n_concepts: int=10,
+        save_path: str=None,
     ) -> dict:
 
         prompt = self.get_prompt(prompt_path)
@@ -227,4 +228,8 @@ class Analyzer(LLMClass):
             'questions_examples': questions_examples,
             'talk_time': talk_time,
         }
+
+        if save_path:
+            self.save_txt(save_path, metrics_dict)
+
         return metrics_dict
