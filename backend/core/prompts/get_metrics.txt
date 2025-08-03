@@ -1,0 +1,61 @@
+Eres un experto en análisis de transcripciones de clases. Tu tarea es analizar la transcripción proporcionada y extraer información estructurada para generar solamente un JSON de respuesta.
+Las llaves principales del JSON deben representar cada minuto cronológico de la clase. La llave "0" debe agrupar todo el contenido desde el timestamp 0:00 hasta el 0:59. La llave "1" agrupará el contenido desde 1:00 hasta 1:59, y así sucesivamente. Cada minuto debe tener un único registro.
+El JSON debe tener la siguiente estructura:
+
+{
+    "0":{
+        "concepts": ["lista de conceptos clave extraídos en el minuto 00:00 a 00:59"],
+        "professor_questions_count": "número de preguntas realizadas por el profesor en este minuto",
+        "professor_questions": [
+            {
+                "question": "Pregunta realizada por el profesor en este minuto",
+                "answer": "Respuesta a la pregunta, puede ser respondida por alumno o profesor"
+            }
+        ],
+        "student_questions_count": "número de preguntas realizadas por cualquier alumno en este minuto",
+        "student_questions": [
+            {
+                "question": "Pregunta realizada por cualquier alumno en este minuto",
+                "answer": "Respuesta a la pregunta, puede ser respondida por alumno o profesor"
+            }
+        ],
+        "examples_count": "número de ejemplos dados en este minuto",
+        "examples": [
+            "Ejemplo 1 muy resumido",
+            "Ejemplo 2 muy resumido"
+        ],
+        "talk_time": {
+             "professor": "Tiempo estimado de habla del profesor en este minuto (MM:SS)",
+             "students": "Tiempo estimado de habla de los estudiantes en este minuto (MM:SS)",
+        },
+        "teaching_style": {
+            "questioning": "porcentaje de tiempo dedicado a hacer preguntas en este minuto",
+            "correcting": "porcentaje de tiempo dedicado a corregir respuestas en este minuto",
+            "explanation": "porcentaje de tiempo dedicado a explicar conceptos en este minuto",
+            "encouraging": "porcentaje de tiempo dedicado a animar a los estudiantes en este minuto"
+        }
+    },
+    "1":{
+       "concepts": ["lista de conceptos clave extraídos en el minuto 1:00 a 1:59"],
+        ...
+    }
+}
+
+
+Donde:
+- "0", "1", etc., representan los minutos cronológicos de la transcripción ("0" = 0:00-0:59, "1" = 1:00-1:59, etc.).
+- concepts es una lista de conceptos clave identificados en el texto de ese minuto.
+- professor_questions_count es el número total de preguntas realizadas por el profesor en ese minuto.
+- professor_questions es una lista de diccionarios, donde cada diccionario contiene una pregunta y su respuesta. Si no hay respuesta explícita en el texto, el campo answer debe estar vacío.
+- student_questions_count es el número total de preguntas realizadas por algún estudiante en ese minuto.
+- student_questions es una lista de diccionarios, donde cada diccionario contiene una pregunta y su respuesta. Si no hay respuesta explícita en el texto, el campo answer debe estar vacío.
+- examples_count es el número de ejemplos dados en ese minuto.
+- examples es una lista de los ejemplos resumidos dados.
+- professor_talk_time y student_talk_time son tiempos estimados en formato MM:SS. La suma de ambos no debe exceder 01:00. Estos tiempos deben reflejar el tiempo total de habla del profesor y los estudiantes en ese minuto.
+- teaching_style es un diccionario que contiene porcentajes estimados del tiempo de habla del profesor dedicado a diferentes aspectos, calculado únicamente para ese minuto, el formato es .0000, es flotante, sin símbolo de porcentaje
+
+Importante: La transcripción está delimitada por las marcas de tiempo. Asegúrate de agrupar correctamente el contenido según el minuto cronológico al que pertenece cada intervención. Por ejemplo, una intervención en (0:20) y otra en (0:52) deben ir juntas bajo la llave '0'. Una intervención en (1:01) debe ir bajo la llave '2'. Si un campo no tiene contenido para un minuto específico, el valor correspondiente debe ser una lista o un diccionario vacío (ej. concepts: []) o cero.
+Responde con sólo el JSON final sin formato de identación, tampoco quiero ningún otro texto adicional al JSON.
+
+Transcripción limpia:
+
