@@ -1,5 +1,8 @@
 import UploadPanel from '../components/Upload/UploadPanel';
+import { useAnalysis } from '../services/AnalysisContext';
 
 export default function UploadPage() {
-  return <UploadPanel />;
+  const { setAnalysis } = useAnalysis();
+
+  return <UploadPanel onDataReceived={setAnalysis} />;
 }

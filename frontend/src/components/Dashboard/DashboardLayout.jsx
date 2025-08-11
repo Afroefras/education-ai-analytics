@@ -6,12 +6,12 @@ import QuestionsExamplesChart from "../Charts/QuestionsExamplesChart";
 import TalkTimeChart from "../Charts/TalkTimeChart";
 
 const DashboardLayout = () => {
-  const { analysis } = useAnalysis();
+  const { analysis, setAnalysis } = useAnalysis();
 
   if (!analysis) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <UploadPanel />
+        <UploadPanel onDataReceived={setAnalysis} />
       </div>
     );
   }

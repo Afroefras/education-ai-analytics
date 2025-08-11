@@ -23,7 +23,7 @@ def check_google_api_key():
     return api_key
 
 
-@router.post("/upload-transcript")
+@router.post("/upload-transcript/")
 async def upload_transcript(file: UploadFile = File(...)):
     try:
         # 0️⃣ Verificar API key antes de procesar
