@@ -1,28 +1,48 @@
-import { PieChart, Pie, Cell, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
-const COLORS = ['#ff00cc', '#ffaa00', '#3357ff', '#00d2ff'];
+const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'];
 
-const mockData = {
-  questioning: 0.2022,
-  correcting: 0.0315,
-  explanation: 0.6562,
-  encouraging: 0.1102,
-};
+const TeachingStyleChart = ({ data }) => {
+  if (!data) {
+    return <p className="text-gray-500">No hay datos de estilo de enseñanza</p>;
+  }
 
-const pieData = Object.entries(mockData).map(([name, value]) => ({ name, value }));
+  const labels = {
+    questioning: 'Preguntas',
+    correcting: 'Correcciones', 
+    explanation: 'Explicaciones',
+    encouraging: 'Aliento'
+  };
 
-export default function TeachingStyleChart() {
+  const pieData = Object.entries(data).map(([name, value]) => ({ 
+    name: labels[name] || name, 
+    value: value,
+    originalKey: name
+  }));
+
   return (
-    <div>
-      <h2 className="mb-2 text-lg font-semibold">Teaching style</h2>
-      <PieChart width={300} height={300}>
-        <Pie data={pieData} dataKey="value" nameKey="name" outerRadius={100}>
-          {pieData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-          ))}
-        </Pie>
-        <Legend />
-      </PieChart>
+    <div className="p-4 bg-white shadow rounded-xl">
+      <h2 className="mb-4 text-lg font-semibold">Estilo de Enseñanza</h2>
+      <ResponsiveContainer width="100%" height={300}>
+        <PieChart>
+          <Pie 
+            data={pieData} 
+            dataKey="value" 
+            nameKey="name" 
+            cx="50%" 
+            cy="50%" 
+            outerRadius={80}
+          >
+            {pieData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <Tooltip formatter={(value) => `${(value * 100).toFixed(1)}%`} />
+          <Legend />
+        </PieChart>
+      </ResponsiveContainer>
     </div>
   );
-}
+};
+
+export default TeachingStyleChart;

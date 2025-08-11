@@ -16,12 +16,14 @@ const DashboardLayout = () => {
     );
   }
 
+  console.log("🔍 Analysis data:", analysis); // ← Agrega esto para debug
+
   return (
     <div className="grid gap-6 p-6 sm:grid-cols-2">
-      <TopicsChart data={analysis.top_concepts} />
-      <TeachingStyleChart data={analysis.teaching_style} />
-      <QuestionsExamplesChart data={analysis.questions_examples} />
-      <TalkTimeChart data={analysis.talk_time} />
+      <TopicsChart data={analysis.data?.top_concepts} />
+      <TeachingStyleChart data={analysis.data?.teaching_style} />
+      <QuestionsExamplesChart data={analysis.data?.questions_examples} />
+      <TalkTimeChart data={analysis.data?.talk_time} />
     </div>
   );
 };

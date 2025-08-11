@@ -1,25 +1,45 @@
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const data = [
-  { minute: 0, professor_questions: 0, examples: 0 },
-  { minute: 1, professor_questions: 1, examples: 3 },
-  { minute: 2, professor_questions: 2, examples: 2 },
-  { minute: 3, professor_questions: 1, examples: 2 },
-  { minute: 4, professor_questions: 0, examples: 5 },
-];
+const QuestionsExamplesChart = ({ data }) => {
+  if (!data || data.length === 0) {
+    return <p className="text-gray-500">No hay datos de preguntas y ejemplos</p>;
+  }
 
-export default function QuestionsExamplesChart() {
   return (
-    <div>
-      <h2 className="mb-2 text-lg font-semibold">Questions and examples</h2>
-      <BarChart width={500} height={300} data={data}>
-        <XAxis dataKey="minute" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="professor_questions" fill="#8884d8" />
-        <Bar dataKey="examples" fill="#82ca9d" />
-      </BarChart>
+    <div className="p-4 bg-white shadow rounded-xl">
+      <h2 className="mb-4 text-lg font-semibold">Preguntas y Ejemplos por Minuto</h2>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data}>
+          <XAxis dataKey="minute" />
+          <YAxis />
+          <Tooltip 
+            labelFormatter={(label) => `Minuto ${label}`}
+            formatter={(value, name) => {
+              const labels = {
+                professor_questions: 'Preguntas del Profesor',
+                student_questions: 'Preguntas de Estudiantes', 
+                examples: 'Ejemplos'
+              };
+              return [value, labels[name] || name];
+            }}
+          />
+          <Legend 
+            formatter={(value) => {
+              const labels = {
+                professor_questions: 'Preguntas del Profesor',
+                student_questions: 'Preguntas de Estudiantes',
+                examples: 'Ejemplos'
+              };
+              return labels[value] || value;
+            }}
+          />
+          <Bar dataKey="professor_questions" fill="#3B82F6" name="professor_questions" />
+          <Bar dataKey="student_questions" fill="#10B981" name="student_questions" />
+          <Bar dataKey="examples" fill="#F59E0B" name="examples" />
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
-}
+};
+
+export default QuestionsExamplesChart;
