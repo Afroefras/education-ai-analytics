@@ -48,9 +48,9 @@ const TalkTimeChart = ({ data }) => {
           />
         </LineChart>
       </ResponsiveContainer>
-      <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-full hover:bg-blue-700">
-        Descargar
-      </button>
+    {/* <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-full hover:bg-blue-700">
+      Descargar
+    </button> */}
     </div>
   );
 };
