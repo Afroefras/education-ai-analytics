@@ -64,6 +64,7 @@ frontend/
 │   │   └── api.js           # Configuración de axios
 │   ├── App.jsx              # Componente raíz de la app
 │   └── main.jsx             # Punto de entrada de la aplicación
+│   └── routes.jsx           # Rutas dentro de la aplicación
 ├── .env                     # Variables de entorno (no incluido en git)
 ├── .gitignore               # Archivos ignorados por git
 ├── eslint.config.js         # Configuración moderna de ESLint (flat config)
