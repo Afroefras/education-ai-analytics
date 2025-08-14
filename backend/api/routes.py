@@ -20,7 +20,7 @@ def check_google_api_key():
     """Verifica que la API key de Google esté configurada"""
     api_key = os.getenv('GOOGLE_API_KEY') or os.getenv('GEMINI_API_KEY')
 
-    print("🔑 API KEY detectada:", api_key)  # 👈 Debug para ver si la está leyendo
+    print("🔑 API KEY detectada:", api_key)  
 
     if not api_key:
         raise HTTPException(
