@@ -1,0 +1,131 @@
+{
+    "top_concepts": [
+        {
+            "concept": "split",
+            "frequency": 3
+        },
+        {
+            "concept": "asistencia",
+            "frequency": 2
+        },
+        {
+            "concept": "dividendo",
+            "frequency": 2
+        },
+        {
+            "concept": "acci\u00f3n",
+            "frequency": 1
+        },
+        {
+            "concept": "precio de la acci\u00f3n",
+            "frequency": 1
+        },
+        {
+            "concept": "casa de bolsa",
+            "frequency": 1
+        },
+        {
+            "concept": "acci\u00f3n accesible",
+            "frequency": 1
+        },
+        {
+            "concept": "inversi\u00f3n",
+            "frequency": 1
+        },
+        {
+            "concept": "ticker symbol",
+            "frequency": 1
+        },
+        {
+            "concept": "derecho del accionista",
+            "frequency": 1
+        }
+    ],
+    "teaching_style": {
+        "questioning": 0.1258,
+        "correcting": 0.0067,
+        "explanation": 0.7867,
+        "encouraging": 0.0808
+    },
+    "questions_examples": [
+        {
+            "minute": 0,
+            "professor_questions": 3,
+            "student_questions": 2,
+            "examples": 0
+        },
+        {
+            "minute": 3,
+            "professor_questions": 2,
+            "student_questions": 0,
+            "examples": 3
+        },
+        {
+            "minute": 6,
+            "professor_questions": 0,
+            "student_questions": 0,
+            "examples": 5
+        },
+        {
+            "minute": 9,
+            "professor_questions": 1,
+            "student_questions": 0,
+            "examples": 2
+        },
+        {
+            "minute": 12,
+            "professor_questions": 0,
+            "student_questions": 0,
+            "examples": 2
+        },
+        {
+            "minute": 15,
+            "professor_questions": 1,
+            "student_questions": 0,
+            "examples": 1
+        },
+        {
+            "minute": 18,
+            "professor_questions": 5,
+            "student_questions": 0,
+            "examples": 0
+        }
+    ],
+    "talk_time": [
+        {
+            "minute": 0,
+            "professor_percentage": 0.6429,
+            "student_percentage": 0.3571
+        },
+        {
+            "minute": 3,
+            "professor_percentage": 0.9429,
+            "student_percentage": 0.0571
+        },
+        {
+            "minute": 6,
+            "professor_percentage": 1.0,
+            "student_percentage": 0.0
+        },
+        {
+            "minute": 9,
+            "professor_percentage": 1.0,
+            "student_percentage": 0.0
+        },
+        {
+            "minute": 12,
+            "professor_percentage": 1.0,
+            "student_percentage": 0.0
+        },
+        {
+            "minute": 15,
+            "professor_percentage": 1.0,
+            "student_percentage": 0.0
+        },
+        {
+            "minute": 18,
+            "professor_percentage": 0.8889,
+            "student_percentage": 0.1111
+        }
+    ]
+}
