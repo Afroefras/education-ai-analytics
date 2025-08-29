@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import reLectureLogo from '../../assets/Logo.png'; 
 
 const MainLayout = ({ children }) => {
   console.log('Rendering MainLayout with children:', children);
@@ -9,10 +10,10 @@ const MainLayout = ({ children }) => {
       <div className="w-64 bg-white shadow-md p-6 flex flex-col">
         {/* Logo */}
         <div className="flex items-center space-x-3 mb-8">
-          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-            LA
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <img src={reLectureLogo} alt="Logo" className="w-full h-full object-contain" />
           </div>
-          <span className="text-xl font-bold text-gray-800">Lecture Analytics</span>
+          <span className="text-xl font-bold text-gray-800">reLecture</span>
         </div>
         
         {/* Navigation */}
