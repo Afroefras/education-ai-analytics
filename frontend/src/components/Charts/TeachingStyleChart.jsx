@@ -1,12 +1,14 @@
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
-// Blue color palette
+// Lighter blue color palette
 const COLORS = [
-  '#1d4ed8', // blue-700
-  '#2563eb', // blue-600
-  '#3b82f6', // blue-500
-  '#60a5fa'  // blue-400
+  '#3b82f6', // blue-500 (lighter)
+  '#60a5fa', // blue-400 (lighter)
+  '#93c5fd', // blue-300 (lighter)
+  '#bfdbfe'  // blue-200 (lighter)
 ];
+
+const textColor = '#414141';
 
 const TeachingStyleChart = ({ data = [] }) => {
   if (!data || data.length === 0) {
@@ -63,7 +65,8 @@ const TeachingStyleChart = ({ data = [] }) => {
             verticalAlign="bottom"
             align="center"
             wrapperStyle={{
-              paddingTop: '1rem'
+              paddingTop: '1rem',
+              color: textColor
             }}
           />
         </PieChart>

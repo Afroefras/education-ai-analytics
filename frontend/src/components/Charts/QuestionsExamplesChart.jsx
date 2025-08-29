@@ -7,9 +7,11 @@ const QuestionsExamplesChart = ({ data = [] }) => {
 
   // Color palette
   const colors = {
-    professor: '#2563eb', // blue-600
-    student: '#3b82f6'   // blue-500
+    professor: '#3b82f6', // blue-500 (lighter)
+    student: '#60a5fa'   // blue-400 (lighter)
   };
+  
+  const textColor = '#414141';
   
   // Calculate the maximum value for the Y-axis
   const maxValue = Math.max(
@@ -29,11 +31,13 @@ const QuestionsExamplesChart = ({ data = [] }) => {
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis 
             dataKey="minute" 
-            label={{ value: 'Minute', position: 'insideBottomRight', offset: -5 }}
+            label={{ value: 'Minute', position: 'insideBottomRight', offset: -5, fill: textColor }}
+            tick={{ fill: textColor }}
           />
           <YAxis 
             domain={[0, maxValue]}
-            label={{ value: 'Count', angle: -90, position: 'insideLeft' }}
+            label={{ value: 'Count', angle: -90, position: 'insideLeft', fill: textColor }}
+            tick={{ fill: textColor }}
           />
           <Tooltip 
             labelFormatter={(label) => `Minute ${label}`}
@@ -46,7 +50,7 @@ const QuestionsExamplesChart = ({ data = [] }) => {
               boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
           />
-          <Legend />
+          <Legend wrapperStyle={{ color: textColor }} />
           <Line 
             type="monotone" 
             dataKey="professor_questions" 

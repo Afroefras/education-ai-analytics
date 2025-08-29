@@ -22,10 +22,10 @@ const TopicsChart = ({ data }) => {
       const data = payload[0].payload;
       return (
         <div className="max-w-xs p-3 bg-white border border-gray-200 rounded-lg shadow-lg">
-          <p className="mb-1 font-semibold text-gray-800">
+          <p className="mb-1 font-semibold" style={{ color: '#414141' }}>
             {data.concept}
           </p>
-          <p className="text-blue-600">
+          <p style={{ color: '#3b82f6' }}>
             Frequency: {data.frequency}
           </p>
         </div>
@@ -46,18 +46,18 @@ const TopicsChart = ({ data }) => {
           <XAxis 
             type="number" 
             domain={[0, 'dataMax']}
-            tick={{ fontSize: 12 }}
+            tick={{ fontSize: 12, fill: '#414141' }}
             tickFormatter={(value) => Math.round(value)}
           />
           <YAxis 
             type="category" 
             dataKey="conceptDisplay"
-            tick={{ fontSize: 12 }}
+            tick={{ fontSize: 12, fill: '#414141' }}
             width={140}
           />
           <Tooltip content={<CustomTooltip />} />
           <Bar dataKey="frequency" 
-            fill="#2563eb" // blue-600
+            fill="#3b82f6" // blue-500 (lighter)
             radius={[0, 4, 4, 0]}
             animationBegin={100}
             animationDuration={1500}

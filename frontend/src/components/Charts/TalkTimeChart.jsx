@@ -5,11 +5,13 @@ const TalkTimeChart = ({ data = [] }) => {
     return <p className="text-gray-500">No talk time data available</p>;
   }
 
-  // Color palette
+  // Lighter blue color palette
   const colors = {
-    professor: '#2563eb', // blue-600
-    student: '#60a5fa'   // blue-400
+    professor: '#3b82f6', // blue-500 (lighter)
+    student: '#93c5fd'   // blue-300 (lighter)
   };
+  
+  const textColor = '#414141';
 
   // Calculate the maximum value for the Y-axis
   const maxValue = Math.max(
@@ -29,27 +31,38 @@ const TalkTimeChart = ({ data = [] }) => {
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis 
             dataKey="minute" 
-            label={{ value: 'Minute', position: 'insideBottomRight', offset: -5 }}
+            label={{ value: 'Minute', position: 'insideBottomRight', offset: -5, fill: textColor }}
+            tick={{ fill: textColor }}
           />
           <YAxis 
             domain={[0, 100]}
             tickFormatter={(value) => `${value}%`}
-            label={{ value: 'Percentage', angle: -90, position: 'insideLeft' }}
+            label={{ value: 'Percentage', angle: -90, position: 'insideLeft', fill: textColor }}
+            tick={{ fill: textColor }}
           />
           <Tooltip 
-            formatter={(value, name) => [`${Math.round(value)}%`, name === 'professor_percentage' ? 'Professor' : 'Students']}
-            labelFormatter={(label) => `Minute ${label}`}
+            formatter={(value, name) => [
+              <span style={{ color: textColor }}>{`${Math.round(value)}%`}</span>, 
+              <span style={{ color: textColor }}>{name === 'professor_percentage' ? 'Professor' : 'Students'}</span>
+            ]}
+            labelFormatter={(label) => <span style={{ color: textColor }}>{`Minute ${label}`}</span>}
             contentStyle={{
               backgroundColor: 'white',
               border: '1px solid #e2e8f0',
               borderRadius: '0.5rem',
               padding: '0.5rem',
               fontSize: '0.875rem',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+              color: textColor
             }}
           />
           <Legend 
-            formatter={(value) => value === 'professor_percentage' ? 'Professor' : 'Students'}
+            formatter={(value) => (
+              <span style={{ color: textColor }}>
+                {value === 'professor_percentage' ? 'Professor' : 'Students'}
+              </span>
+            )}
+            wrapperStyle={{ color: textColor }}
           />
           <Area 
             type="monotone" 
