@@ -6,56 +6,23 @@ import TalkTimeChart from '../components/Charts/TalkTimeChart';
 import mockData from '../services/mockData.json';
 
 // Transform teaching_style data for the pie chart
-const teachingStyleData = mockData.teaching_style ? [
-  { name: 'Questioning', value: mockData.teaching_style.questioning * 100 },
-  { name: 'Explanation', value: mockData.teaching_style.explanation * 100 },
-  { name: 'Correcting', value: mockData.teaching_style.correcting * 100 },
-  { name: 'Encouragement', value: mockData.teaching_style.encouraging * 100 }
-] : [];
+const teachingStyleData = mockData.teaching_style
+  ? [
+      { name: 'Questioning', value: mockData.teaching_style.questioning * 100 },
+      { name: 'Explanation', value: mockData.teaching_style.explanation * 100 },
+      { name: 'Correcting', value: mockData.teaching_style.correcting * 100 },
+      { name: 'Encouragement', value: mockData.teaching_style.encouraging * 100 }
+    ].filter(item => item.value > 0)
+  : [];
 
-// Calculate talk time percentages from the data
-const calculateTalkTimePercentages = () => {
-  if (!mockData.talk_time || mockData.talk_time.length === 0) {
-    return { professor: 0, students: 0 };
-  }
-  
-  const totalMinutes = mockData.talk_time.length;
-  const professorTime = mockData.talk_time.reduce((sum, minute) => sum + minute.professor_percentage, 0);
-  const studentTime = mockData.talk_time.reduce((sum, minute) => sum + minute.student_percentage, 0);
-  
-  return {
-    professor: Math.round((professorTime / totalMinutes) * 100),
-    students: Math.round((studentTime / totalMinutes) * 100)
-  };
-};
-
-const talkTimePercentages = calculateTalkTimePercentages();
-const talkTimeData = [
-  { name: 'Professor', value: talkTimePercentages.professor },
-  { name: 'Students', value: talkTimePercentages.students }
-];
+// Use the talk_time data directly for the area chart
+const talkTimeData = mockData.talk_time || [];
 
 // Use the top_concepts directly from mockData
 const topicsData = mockData.top_concepts || [];
 
-// Transform questions_examples data for the bar chart
-const questionsExamplesData = mockData.questions_examples && mockData.questions_examples.length > 0
-  ? [
-      { 
-        name: 'Professor', 
-        questions: mockData.questions_examples[0].professor_questions || 0, 
-        examples: mockData.questions_examples[0].examples || 0
-      },
-      { 
-        name: 'Students', 
-        questions: mockData.questions_examples[0].student_questions || 0, 
-        examples: 0 // Not available in the data
-      }
-    ]
-  : [
-      { name: 'Professor', questions: 0, examples: 0 },
-      { name: 'Students', questions: 0, examples: 0 }
-    ];
+// Use the questions_examples data directly for the line chart
+const questionsExamplesData = mockData.questions_examples || [];
 
 // Golden ratio for chart proportions (1:1.618)
 const CHART_HEIGHT = 400;
