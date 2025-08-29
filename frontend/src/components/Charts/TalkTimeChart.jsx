@@ -1,56 +1,48 @@
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-const TalkTimeChart = ({ data }) => {
+const TalkTimeChart = ({ data = [] }) => {
   if (!data || data.length === 0) {
-    return <p className="text-gray-500">No hay datos de tiempo de habla</p>;
+    return <p className="text-gray-500">No talk time data available</p>;
   }
 
+  // Blue and purple color palette
+  const colors = {
+    'Professor': '#4f46e5', // indigo-600
+    'Students': '#8b5cf6'   // purple-500
+  };
+
   return (
-    <div className="p-4 bg-white shadow rounded-xl">
-      <h2 className="mb-4 text-lg font-semibold">Distribución del Tiempo de Habla</h2>
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="minute" />
-          <YAxis domain={[0, 1]} tickFormatter={(value) => `${(value * 100).toFixed(0)}%`} />
+    <div className="h-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={false}
+            outerRadius={80}
+            fill="#8884d8"
+            dataKey="value"
+            label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[entry.name] || '#8884d8'} />
+            ))}
+          </Pie>
           <Tooltip 
-            labelFormatter={(label) => `Minuto ${label}`}
-            formatter={(value, name) => {
-              const labels = {
-                professor_percentage: 'Profesor',
-                student_percentage: 'Estudiantes'
-              };
-              return [`${(value * 100).toFixed(1)}%`, labels[name] || name];
+            formatter={(value) => [`${value}%`, 'Percentage']} 
+            contentStyle={{
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
+              borderRadius: '0.5rem',
+              padding: '0.5rem',
+              fontSize: '0.875rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             }}
           />
-          <Legend 
-            formatter={(value) => {
-              const labels = {
-                professor_percentage: 'Profesor',
-                student_percentage: 'Estudiantes'
-              };
-              return labels[value] || value;
-            }}
-          />
-          <Line 
-            type="monotone" 
-            dataKey="professor_percentage" 
-            stroke="#3B82F6" 
-            strokeWidth={3}
-            name="professor_percentage"
-          />
-          <Line 
-            type="monotone" 
-            dataKey="student_percentage" 
-            stroke="#10B981" 
-            strokeWidth={3}
-            name="student_percentage"
-          />
-        </LineChart>
+          <Legend />
+        </PieChart>
       </ResponsiveContainer>
-    {/* <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-full hover:bg-blue-700">
-      Descargar
-    </button> */}
     </div>
   );
 };

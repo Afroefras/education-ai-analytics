@@ -1,29 +1,30 @@
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
-const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444'];
+// Blue and purple color palette
+const COLORS = [
+  '#4f46e5', // indigo-600
+  '#6366f1', // indigo-500
+  '#8b5cf6', // purple-500
+  '#a78bfa'  // purple-400
+];
 
-const TeachingStyleChart = ({ data }) => {
-  if (!data) {
-    return <p className="text-gray-500">No hay datos de estilo de enseñanza</p>;
+const TeachingStyleChart = ({ data = [] }) => {
+  if (!data || data.length === 0) {
+    return <p className="text-gray-500">No teaching style data available</p>;
   }
 
-  const labels = {
-    questioning: 'Preguntas',
-    correcting: 'Correcciones', 
-    explanation: 'Explicaciones',
-    encouraging: 'Aliento'
-  };
-
-  const pieData = Object.entries(data).map(([name, value]) => ({ 
-    name: labels[name] || name, 
-    value: value,
-    originalKey: name
-  }));
+  // If data is already in the right format, use it directly
+  const pieData = Array.isArray(data) 
+    ? data 
+    : Object.entries(data).map(([name, value]) => ({
+        name: name === 'encouraging' ? 'Encouragement' : name.charAt(0).toUpperCase() + name.slice(1),
+        value: value * 100, // Convert to percentage if coming from decimal
+        originalKey: name
+      })).filter(item => item.value > 0);
 
   return (
-    <div className="p-4 bg-white shadow rounded-xl">
-      <h2 className="mb-4 text-lg font-semibold">Estilo de Enseñanza</h2>
-      <ResponsiveContainer width="100%" height={300}>
+    <div className="h-full">
+      <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie 
             data={pieData} 
@@ -31,14 +32,40 @@ const TeachingStyleChart = ({ data }) => {
             nameKey="name" 
             cx="50%" 
             cy="50%" 
+            innerRadius={60}
             outerRadius={80}
+            paddingAngle={2}
+            labelLine={false}
+            animationBegin={100}
+            animationDuration={1500}
           >
             {pieData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+              <Cell 
+                key={`cell-${index}`} 
+                fill={COLORS[index % COLORS.length]} 
+                stroke="#fff"
+                strokeWidth={2}
+              />
             ))}
           </Pie>
-          <Tooltip formatter={(value) => `${(value * 100).toFixed(1)}%`} />
-          <Legend />
+          <Tooltip 
+            formatter={(value) => [`${(value * 100).toFixed(1)}%`, 'Percentage']} 
+            contentStyle={{
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
+              borderRadius: '0.5rem',
+              padding: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+            }}
+          />
+          <Legend 
+            layout="horizontal" 
+            verticalAlign="bottom"
+            align="center"
+            wrapperStyle={{
+              paddingTop: '1rem'
+            }}
+          />
         </PieChart>
       </ResponsiveContainer>
     </div>
