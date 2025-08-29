@@ -1,11 +1,11 @@
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
-// Blue and purple color palette
+// Blue color palette
 const COLORS = [
-  '#4f46e5', // indigo-600
-  '#6366f1', // indigo-500
-  '#8b5cf6', // purple-500
-  '#a78bfa'  // purple-400
+  '#1d4ed8', // blue-700
+  '#2563eb', // blue-600
+  '#3b82f6', // blue-500
+  '#60a5fa'  // blue-400
 ];
 
 const TeachingStyleChart = ({ data = [] }) => {

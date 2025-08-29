@@ -7,8 +7,8 @@ const TalkTimeChart = ({ data = [] }) => {
 
   // Color palette
   const colors = {
-    professor: '#4f46e5', // indigo-600
-    student: '#8b5cf6'   // purple-500
+    professor: '#2563eb', // blue-600
+    student: '#60a5fa'   // blue-400
   };
 
   // Calculate the maximum value for the Y-axis

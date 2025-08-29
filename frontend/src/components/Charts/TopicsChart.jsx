@@ -57,7 +57,7 @@ const TopicsChart = ({ data }) => {
           />
           <Tooltip content={<CustomTooltip />} />
           <Bar dataKey="frequency" 
-            fill="#4f46e5"
+            fill="#2563eb" // blue-600
             radius={[0, 4, 4, 0]}
             animationBegin={100}
             animationDuration={1500}

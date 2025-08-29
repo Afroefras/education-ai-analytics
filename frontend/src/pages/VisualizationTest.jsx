@@ -30,10 +30,6 @@ const CHART_HEIGHT = 400;
 const VisualizationTest = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Visualization Test</h1>
-        <p className="text-gray-600">Testing chart components with mock data</p>
-      </div>
       
       <div className="grid gap-6 lg:grid-cols-2">
         {/* Teaching Style Distribution */}
