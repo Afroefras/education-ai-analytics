@@ -33,32 +33,36 @@ const DashboardLayout = () => {
       </div>
       
       {/* Dashboard Grid */}
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Teaching Style</h2>
-          <div className="h-80">
-            <TeachingStyleChart data={analysis.data?.teaching_style} />
+      <div className="grid gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-1">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Teaching Style</h2>
+            <div className="h-80">
+              <TeachingStyleChart data={analysis.data?.teaching_style} />
+            </div>
+          </div>
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Talk Time</h2>
+            <div className="h-80">
+              <TalkTimeChart data={analysis.data?.talk_time} />
+            </div>
           </div>
         </div>
         
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Talk Time</h2>
-          <div className="h-80">
-            <TalkTimeChart data={analysis.data?.talk_time} />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Key Topics</h2>
+            <div className="h-80">
+              <TopicsChart data={analysis.data?.top_concepts} />
+            </div>
           </div>
-        </div>
-        
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Key Topics</h2>
-          <div className="h-80">
-            <TopicsChart data={analysis.data?.top_concepts} />
-          </div>
-        </div>
-        
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Questions & Examples</h2>
-          <div className="h-80">
-            <QuestionsExamplesChart data={analysis.data?.questions_examples} />
+          
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Questions & Examples</h2>
+            <div className="h-80">
+              <QuestionsExamplesChart data={analysis.data?.questions_examples} />
+            </div>
           </div>
         </div>
       </div>
