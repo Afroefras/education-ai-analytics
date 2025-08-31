@@ -25,22 +25,23 @@ const TeachingStyleChart = ({ data = [] }) => {
       })).filter(item => item.value > 0);
 
   return (
-    <div className="h-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart>
-          <Pie 
-            data={pieData} 
-            dataKey="value" 
-            nameKey="name" 
-            cx="50%" 
-            cy="50%" 
-            innerRadius={60}
-            outerRadius={80}
-            paddingAngle={2}
-            labelLine={false}
-            animationBegin={100}
-            animationDuration={1500}
-          >
+    <div className="h-full w-full flex items-center justify-center">
+      <div className="relative" style={{ width: '240px', height: '240px' }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie 
+              data={pieData} 
+              dataKey="value" 
+              nameKey="name" 
+              cx="50%" 
+              cy="50%" 
+              innerRadius="70%"
+              outerRadius="90%"
+              paddingAngle={2}
+              labelLine={false}
+              animationBegin={100}
+              animationDuration={1500}
+            >
             {pieData.map((entry, index) => (
               <Cell 
                 key={`cell-${index}`} 
@@ -60,17 +61,21 @@ const TeachingStyleChart = ({ data = [] }) => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             }}
           />
-          <Legend 
-            layout="horizontal" 
-            verticalAlign="bottom"
-            align="center"
-            wrapperStyle={{
-              paddingTop: '1rem',
-              color: textColor
-            }}
-          />
-        </PieChart>
-      </ResponsiveContainer>
+            <Legend 
+              layout="horizontal" 
+              verticalAlign="bottom"
+              align="center"
+              wrapperStyle={{
+                position: 'absolute',
+                bottom: '-40px',
+                left: 0,
+                right: 0,
+                color: textColor
+              }}
+            />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 };
