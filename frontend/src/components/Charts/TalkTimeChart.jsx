@@ -7,8 +7,8 @@ const TalkTimeChart = ({ data = [] }) => {
 
   // Lighter blue color palette
   const colors = {
-    professor: '#3b82f6', // blue-500 (lighter)
-    student: '#93c5fd'   // blue-300 (lighter)
+    student: '#60a5fa',  // blue-300 (lighter)
+    professor: '#93c5fd' // blue-500 (lighter)
   };
   
   const textColor = '#414141';
@@ -41,9 +41,9 @@ const TalkTimeChart = ({ data = [] }) => {
             tick={{ fill: textColor }}
           />
           <Tooltip 
-            formatter={(value, name) => [
+            formatter={(value, name, props) => [
               <span style={{ color: textColor }}>{`${Math.round(value)}%`}</span>, 
-              <span style={{ color: textColor }}>{name === 'professor_percentage' ? 'Professor' : 'Students'}</span>
+              <span style={{ color: textColor }}>{props.payload.name}</span>
             ]}
             labelFormatter={(label) => <span style={{ color: textColor }}>{`Minute ${label}`}</span>}
             contentStyle={{
@@ -66,22 +66,22 @@ const TalkTimeChart = ({ data = [] }) => {
           />
           <Area 
             type="monotone" 
-            dataKey="professor_percentage" 
-            stroke={colors.professor}
-            fill={colors.professor}
-            fillOpacity={0.3}
-            name="Professor"
+            dataKey="student_percentage" 
+            stroke={colors.student}
+            fill={colors.student}
+            fillOpacity={0.5}
+            name="Students"
             unit="%"
             strokeWidth={2}
             dot={false}
           />
           <Area 
             type="monotone" 
-            dataKey="student_percentage" 
-            stroke={colors.student}
-            fill={colors.student}
-            fillOpacity={0.3}
-            name="Students"
+            dataKey="professor_percentage" 
+            stroke={colors.professor}
+            fill={colors.professor}
+            fillOpacity={0.1}
+            name="Professor"
             unit="%"
             strokeWidth={2}
             dot={false}
