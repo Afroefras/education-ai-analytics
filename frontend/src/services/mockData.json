@@ -49,7 +49,7 @@
         {"minute": 7, "professor_percentage": 77.0, "student_percentage": 12.0},
         {"minute": 8, "professor_percentage": 90.0, "student_percentage": 4.0},
         {"minute": 9, "professor_percentage": 61.0, "student_percentage": 30.0},
-        {"minute": 10, "professor_percentage": 0.0, "student_percentage": 100.0},
+        {"minute": 10, "professor_percentage": 22.0, "student_percentage": 60.0},
         {"minute": 11, "professor_percentage": 73.68, "student_percentage": 26.32},
         {"minute": 12, "professor_percentage": 83.05, "student_percentage": 16.95},
         {"minute": 13, "professor_percentage": 64.91, "student_percentage": 35.09},
