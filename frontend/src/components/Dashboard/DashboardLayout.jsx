@@ -34,19 +34,19 @@ const DashboardLayout = () => {
       
       {/* Dashboard Grid */}
       <div className="grid gap-4">
-        <div className="flex flex-col lg:flex-row gap-4">
-          {/* Teaching Style - Square */}
-          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 w-full lg:w-[250px] flex-shrink-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+          {/* Teaching Style - 3 columns */}
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 lg:col-span-3">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Teaching Style</h2>
-            <div className="w-full h-[90px] lg:h-[80px]">
+            <div className="w-full h-full min-h-[200px]">
               <TeachingStyleChart data={analysis.data?.teaching_style} />
             </div>
           </div>
           
-          {/* Talk Time - Rectangle */}
-          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex-1">
+          {/* Talk Time - 9 columns */}
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 lg:col-span-9">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Talk Time</h2>
-            <div className="h-[90px] w-full">
+            <div className="h-[200px] w-full">
               <TalkTimeChart data={analysis.data?.talk_time} />
             </div>
           </div>
