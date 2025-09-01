@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, LabelList } from 'recharts';
 
 // Lighter blue color palette
 const COLORS = [
@@ -25,22 +25,37 @@ const TeachingStyleChart = ({ data = [] }) => {
       })).filter(item => item.value > 0);
 
   return (
-    <div className="h-full w-full flex items-center justify-center">
-      <div className="relative w-full" style={{ aspectRatio: '1/1', maxWidth: '280px' }}>
+    <div className="h-full w-full flex items-center justify-center p-2">
+      <div className="relative w-full h-full min-h-[250px] mx-auto">
         <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
+          <PieChart margin={{ top: 40, right: 40, bottom: 40, left: 40 }}>
             <Pie 
               data={pieData} 
               dataKey="value" 
               nameKey="name" 
               cx="50%" 
               cy="50%" 
-              innerRadius="70%"
-              outerRadius="90%"
-              paddingAngle={2}
-              labelLine={false}
+              innerRadius="40%"
+              outerRadius="70%"
+              paddingAngle={1}
               animationBegin={100}
               animationDuration={1500}
+              label={({ name, percent, value }) => {
+                // Always show label with consistent format
+                return `${(percent * 100).toFixed(0)}% ${name}`;
+              }}
+              labelLine={{
+                stroke: '#94a3b8',
+                strokeWidth: 0.5,
+                length: 10,
+                lengthType: 'pixel',
+              }}
+              labelStyle={{
+                fontSize: '11px',
+                fill: textColor,
+                fontWeight: '500',
+                textShadow: '0 0 5px white',
+              }}
             >
             {pieData.map((entry, index) => (
               <Cell 
@@ -50,7 +65,7 @@ const TeachingStyleChart = ({ data = [] }) => {
                 strokeWidth={2}
               />
             ))}
-          </Pie>
+            </Pie>
           <Tooltip 
             formatter={(value) => [`${(value * 100).toFixed(1)}%`, 'Percentage']} 
             contentStyle={{
@@ -61,18 +76,7 @@ const TeachingStyleChart = ({ data = [] }) => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             }}
           />
-            <Legend 
-              layout="horizontal" 
-              verticalAlign="bottom"
-              align="center"
-              wrapperStyle={{
-                position: 'absolute',
-                bottom: '-40px',
-                left: 0,
-                right: 0,
-                color: textColor
-              }}
-            />
+            {/* Legend removed - labels are now directly on the chart */}
           </PieChart>
         </ResponsiveContainer>
       </div>
