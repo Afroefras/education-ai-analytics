@@ -25,7 +25,7 @@ const topicsData = mockData.top_concepts || [];
 const questionsExamplesData = mockData.questions_examples || [];
 
 // Golden ratio for chart proportions (1:1.618)
-const CHART_HEIGHT = 400;
+const CHART_HEIGHT = 320;
 
 const VisualizationTest = () => {
   return (
