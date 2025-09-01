@@ -2,10 +2,10 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 // Lighter blue color palette
 const COLORS = [
-  '#3b82f6', // blue-500 (lighter)
+  '#2661c7', // blue-500 (lighter)
   '#60a5fa', // blue-400 (lighter)
   '#93c5fd', // blue-300 (lighter)
-  '#bfdbfe'  // blue-200 (lighter)
+  '#6d8ec7'  // blue-200 (lighter)
 ];
 
 const textColor = '#414141';
