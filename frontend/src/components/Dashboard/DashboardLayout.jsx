@@ -38,7 +38,7 @@ const DashboardLayout = () => {
           {/* Teaching Style - Square */}
           <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 w-full lg:w-[250px] flex-shrink-0">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Teaching Style</h2>
-            <div className="w-full h-[130px] lg:h-[115px]">
+            <div className="w-full h-[90px] lg:h-[80px]">
               <TeachingStyleChart data={analysis.data?.teaching_style} />
             </div>
           </div>
@@ -46,7 +46,7 @@ const DashboardLayout = () => {
           {/* Talk Time - Rectangle */}
           <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex-1">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Talk Time</h2>
-            <div className="h-[130px] w-full">
+            <div className="h-[90px] w-full">
               <TalkTimeChart data={analysis.data?.talk_time} />
             </div>
           </div>
@@ -55,14 +55,14 @@ const DashboardLayout = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Key Topics</h2>
-            <div className="h-32">
+            <div className="h-20">
               <TopicsChart data={analysis.data?.top_concepts} />
             </div>
           </div>
           
           <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
             <h2 className="text-base font-semibold text-gray-800 mb-2">Questions & Examples</h2>
-            <div className="h-32">
+            <div className="h-20">
               <QuestionsExamplesChart data={analysis.data?.questions_examples} />
             </div>
           </div>
