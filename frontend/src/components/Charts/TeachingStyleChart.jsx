@@ -26,7 +26,7 @@ const TeachingStyleChart = ({ data = [] }) => {
 
   return (
     <div className="h-full w-full flex items-center justify-center">
-      <div className="relative" style={{ width: '240px', height: '240px' }}>
+      <div className="relative w-full" style={{ aspectRatio: '1/1', maxWidth: '280px' }}>
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie 
