@@ -25,42 +25,44 @@ const DashboardLayout = () => {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4 p-2">
       {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Classroom Analytics</h1>
-        <p className="text-gray-600">Insights from your lecture analysis</p>
+      <div className="mb-2">
+        <h1 className="text-xl md:text-2xl font-bold text-gray-900">Classroom Analytics</h1>
+        <p className="text-sm md:text-base text-gray-600">Insights from your lecture analysis</p>
       </div>
       
       {/* Dashboard Grid */}
-      <div className="grid gap-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-1">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Teaching Style</h2>
-            <div className="h-80">
+      <div className="grid gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
+          {/* Teaching Style - Square */}
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 w-full lg:w-[250px] flex-shrink-0">
+            <h2 className="text-base font-semibold text-gray-800 mb-2">Teaching Style</h2>
+            <div className="w-full h-[130px] lg:h-[115px]">
               <TeachingStyleChart data={analysis.data?.teaching_style} />
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Talk Time</h2>
-            <div className="h-80">
+          {/* Talk Time - Rectangle */}
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex-1">
+            <h2 className="text-base font-semibold text-gray-800 mb-2">Talk Time</h2>
+            <div className="h-[130px] w-full">
               <TalkTimeChart data={analysis.data?.talk_time} />
             </div>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Key Topics</h2>
-            <div className="h-80">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+            <h2 className="text-base font-semibold text-gray-800 mb-2">Key Topics</h2>
+            <div className="h-32">
               <TopicsChart data={analysis.data?.top_concepts} />
             </div>
           </div>
           
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Questions & Examples</h2>
-            <div className="h-80">
+          <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+            <h2 className="text-base font-semibold text-gray-800 mb-2">Questions & Examples</h2>
+            <div className="h-32">
               <QuestionsExamplesChart data={analysis.data?.questions_examples} />
             </div>
           </div>
