@@ -31,9 +31,9 @@ const VisualizationTest = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-4">
         {/* Teaching Style Distribution */}
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow lg:col-span-1">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Teaching Style Distribution</h2>
           <div className="w-full" style={{ height: CHART_HEIGHT }}>
             <TeachingStyleChart data={teachingStyleData} />
@@ -41,7 +41,7 @@ const VisualizationTest = () => {
         </div>
         
         {/* Talk Time Distribution */}
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow lg:col-span-3">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Talk Time Distribution</h2>
           <div className="w-full" style={{ height: CHART_HEIGHT }}>
             <TalkTimeChart data={talkTimeData} />
@@ -49,7 +49,7 @@ const VisualizationTest = () => {
         </div>
         
         {/* Most Mentioned Topics */}
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow lg:col-span-2">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Key Topics</h2>
           <div className="w-full" style={{ height: CHART_HEIGHT }}>
             <TopicsChart data={topicsData} />
@@ -57,7 +57,7 @@ const VisualizationTest = () => {
         </div>
         
         {/* Questions & Examples */}
-        <div className="bg-white p-6 rounded-xl shadow">
+        <div className="bg-white p-6 rounded-xl shadow lg:col-span-2">
           <h2 className="text-xl font-semibold text-gray-800 mb-4">Questions & Examples</h2>
           <div className="w-full" style={{ height: CHART_HEIGHT }}>
             <QuestionsExamplesChart data={questionsExamplesData} />
