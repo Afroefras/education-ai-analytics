@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, LabelList } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 // Lighter blue color palette
 const COLORS = [
@@ -36,25 +36,15 @@ const TeachingStyleChart = ({ data = [] }) => {
               cx="50%" 
               cy="50%" 
               innerRadius="40%"
-              outerRadius="70%"
+              outerRadius="80%"
               paddingAngle={1}
               animationBegin={100}
               animationDuration={1500}
-              label={({ name, percent, value }) => {
-                // Always show label with consistent format
-                return `${(percent * 100).toFixed(0)}% ${name}`;
-              }}
+              label={({ name, percent }) => `${(percent * 100).toFixed(0)}% ${name}`}
               labelLine={{
                 stroke: '#94a3b8',
                 strokeWidth: 0.5,
-                length: 10,
-                lengthType: 'pixel',
-              }}
-              labelStyle={{
-                fontSize: '11px',
-                fill: textColor,
-                fontWeight: '500',
-                textShadow: '0 0 5px white',
+                length: 15,
               }}
             >
             {pieData.map((entry, index) => (
@@ -67,7 +57,7 @@ const TeachingStyleChart = ({ data = [] }) => {
             ))}
             </Pie>
           <Tooltip 
-            formatter={(value) => [`${(value * 100).toFixed(1)}%`, 'Percentage']} 
+            formatter={(value) => [`${value.toFixed(1)}%`, 'Percentage']} 
             contentStyle={{
               backgroundColor: 'white',
               border: '1px solid #e2e8f0',
@@ -76,7 +66,6 @@ const TeachingStyleChart = ({ data = [] }) => {
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
             }}
           />
-            {/* Legend removed - labels are now directly on the chart */}
           </PieChart>
         </ResponsiveContainer>
       </div>
