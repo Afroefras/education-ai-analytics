@@ -56,12 +56,40 @@ const TopicsChart = ({ data }) => {
             width={140}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Bar dataKey="frequency" 
-            fill="#3b82f6" // blue-500 (lighter)
+          <defs>
+            <linearGradient id="barGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#93c5fd" /> {/* light blue-300 */}
+              <stop offset="100%" stopColor="#1d4ed8" /> /* dark blue-700 */
+            </linearGradient>
+          </defs>
+          <Bar 
+            dataKey="frequency" 
+            fill="url(#barGradient)"
             radius={[0, 4, 4, 0]}
             animationBegin={100}
             animationDuration={1500}
-          />
+          >
+            {chartData.map((entry, index) => {
+              // Calculate color intensity based on frequency (darker for higher values)
+              const maxFreq = Math.max(...chartData.map(item => item.frequency));
+              const ratio = entry.frequency / maxFreq;
+              const blueValue = Math.round(210 - (150 * ratio)); // 210 to 60 (darker blue as frequency increases)
+              const color = `hsl(210, 96%, ${65 - (25 * ratio)}%)`; // Adjust lightness based on frequency
+              
+              return (
+                <rect 
+                  key={`bar-${index}`}
+                  x={entry.x}
+                  y={entry.y}
+                  width={entry.width}
+                  height={entry.height}
+                  fill={color}
+                  rx={4}
+                  ry={4}
+                />
+              );
+            })}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>
