@@ -1,11 +1,14 @@
-import Routes from './routes';
-import Layout from './components/Layout';
+import AppRoutes from './routes';
+import { AnalysisProvider } from './services/AnalysisContext';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
-    <Layout>
-      <Routes />
-    </Layout>
+    <ErrorBoundary>
+      <AnalysisProvider>
+        <AppRoutes />
+      </AnalysisProvider>
+    </ErrorBoundary>
   );
 }
 

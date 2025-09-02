@@ -1,56 +1,86 @@
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-const TalkTimeChart = ({ data }) => {
+const TalkTimeChart = ({ data = [] }) => {
   if (!data || data.length === 0) {
-    return <p className="text-gray-500">No hay datos de tiempo de habla</p>;
+    return <p className="text-gray-500">No talk time data available</p>;
   }
 
+  // Color palette
+  const colors = {
+    darkBlue: '#60a5fa',  // Darker blue
+    lightBlue: '#93c5fd' // Lighter blue
+  };
+  
+  const textColor = '#414141';
+
+  // Calculate the maximum value for the Y-axis
+  const maxValue = Math.max(
+    ...data.map(item => Math.max(
+      item.professor_percentage * 100 || 0,
+      item.student_percentage * 100 || 0
+    ))
+  );
+
   return (
-    <div className="p-4 bg-white shadow rounded-xl">
-      <h2 className="mb-4 text-lg font-semibold">Distribución del Tiempo de Habla</h2>
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="minute" />
-          <YAxis domain={[0, 1]} tickFormatter={(value) => `${(value * 100).toFixed(0)}%`} />
+    <div className="h-full">
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          data={data}
+          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+        >
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <XAxis 
+            dataKey="minute" 
+            label={{ value: 'Minute', position: 'insideBottomRight', offset: -5, fill: textColor }}
+            tick={{ fill: textColor }}
+          />
+          <YAxis 
+            domain={[0, 100]}
+            tickFormatter={(value) => `${value}%`}
+            label={{ value: 'Percentage', angle: -90, position: 'insideLeft', fill: textColor }}
+            tick={{ fill: textColor }}
+          />
           <Tooltip 
-            labelFormatter={(label) => `Minuto ${label}`}
-            formatter={(value, name) => {
-              const labels = {
-                professor_percentage: 'Profesor',
-                student_percentage: 'Estudiantes'
-              };
-              return [`${(value * 100).toFixed(1)}%`, labels[name] || name];
+            formatter={(value, name, props) => [
+              <span style={{ color: textColor }}>{`${Math.round(value)}%`}</span>, 
+              <span style={{ color: textColor }}>{props.payload.name}</span>
+            ]}
+            labelFormatter={(label) => <span style={{ color: textColor }}>{`Minute ${label}`}</span>}
+            contentStyle={{
+              backgroundColor: 'white',
+              border: '1px solid #e2e8f0',
+              borderRadius: '0.5rem',
+              padding: '0.5rem',
+              fontSize: '0.875rem',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+              color: textColor
             }}
           />
-          <Legend 
-            formatter={(value) => {
-              const labels = {
-                professor_percentage: 'Profesor',
-                student_percentage: 'Estudiantes'
-              };
-              return labels[value] || value;
-            }}
-          />
-          <Line 
+          <Legend wrapperStyle={{ color: textColor }} />
+          <Area 
             type="monotone" 
             dataKey="professor_percentage" 
-            stroke="#3B82F6" 
-            strokeWidth={3}
-            name="professor_percentage"
+            stroke={colors.lightBlue}
+            fill={colors.lightBlue}
+            fillOpacity={0.1}
+            name="Professor"
+            unit="%"
+            strokeWidth={2}
+            dot={false}
           />
-          <Line 
+          <Area 
             type="monotone" 
             dataKey="student_percentage" 
-            stroke="#10B981" 
-            strokeWidth={3}
-            name="student_percentage"
+            stroke={colors.darkBlue}
+            fill={colors.darkBlue}
+            fillOpacity={0.5}
+            name="Students"
+            unit="%"
+            strokeWidth={2}
+            dot={false}
           />
-        </LineChart>
+        </AreaChart>
       </ResponsiveContainer>
-    {/* <button className="px-6 py-2 mt-4 text-white bg-blue-600 rounded-full hover:bg-blue-700">
-      Descargar
-    </button> */}
     </div>
   );
 };

@@ -1,263 +1,62 @@
 {
     "top_concepts": [
-        {
-            "concept": "Pase de lista",
-            "frequency": 3
-        },
-        {
-            "concept": "Despedida",
-            "frequency": 2
-        },
-        {
-            "concept": "Definici\u00f3n de objetivo",
-            "frequency": 1
-        },
-        {
-            "concept": "Objetivos de proyecto",
-            "frequency": 1
-        },
-        {
-            "concept": "Largo plazo (jubilaci\u00f3n)",
-            "frequency": 1
-        },
-        {
-            "concept": "Mediano plazo (comprar casa)",
-            "frequency": 1
-        },
-        {
-            "concept": "Corto plazo (viaje)",
-            "frequency": 1
-        },
-        {
-            "concept": "Tolerancia al riesgo",
-            "frequency": 1
-        },
-        {
-            "concept": "Renta fija",
-            "frequency": 1
-        },
-        {
-            "concept": "Renta variable",
-            "frequency": 1
-        }
+        {"concept": "Professor", "frequency": 5},
+        {"concept": "Reflection", "frequency": 4},
+        {"concept": "Data", "frequency": 4},
+        {"concept": "Tools", "frequency": 3},
+        {"concept": "Large Language Models", "frequency": 3},
+        {"concept": "Metrics", "frequency": 2},
+        {"concept": "Empowerment", "frequency": 2},
+        {"concept": "Pedagogical Growth", "frequency": 2},
+        {"concept": "Class Rhythm", "frequency": 1},
+        {"concept": "Continuous Improvement", "frequency": 1}
     ],
     "teaching_style": {
-        "questioning": 0.2022,
-        "correcting": 0.0315,
-        "explanation": 0.6562,
-        "encouraging": 0.1102
+        "questioning": 0.0335,
+        "correcting": 0.0491,
+        "explanation": 0.7934,
+        "encouraging": 0.124
     },
     "questions_examples": [
-        {
-            "minute": 0,
-            "professor_questions": 0,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 1,
-            "professor_questions": 1,
-            "student_questions": 0,
-            "examples": 3
-        },
-        {
-            "minute": 2,
-            "professor_questions": 2,
-            "student_questions": 0,
-            "examples": 2
-        },
-        {
-            "minute": 3,
-            "professor_questions": 1,
-            "student_questions": 0,
-            "examples": 2
-        },
-        {
-            "minute": 4,
-            "professor_questions": 0,
-            "student_questions": 0,
-            "examples": 5
-        },
-        {
-            "minute": 5,
-            "professor_questions": 0,
-            "student_questions": 0,
-            "examples": 4
-        },
-        {
-            "minute": 6,
-            "professor_questions": 2,
-            "student_questions": 0,
-            "examples": 2
-        },
-        {
-            "minute": 7,
-            "professor_questions": 0,
-            "student_questions": 0,
-            "examples": 3
-        },
-        {
-            "minute": 8,
-            "professor_questions": 1,
-            "student_questions": 0,
-            "examples": 1
-        },
-        {
-            "minute": 9,
-            "professor_questions": 1,
-            "student_questions": 0,
-            "examples": 1
-        },
-        {
-            "minute": 10,
-            "professor_questions": 0,
-            "student_questions": 1,
-            "examples": 0
-        },
-        {
-            "minute": 11,
-            "professor_questions": 2,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 12,
-            "professor_questions": 2,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 13,
-            "professor_questions": 3,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 14,
-            "professor_questions": 1,
-            "student_questions": 1,
-            "examples": 0
-        },
-        {
-            "minute": 15,
-            "professor_questions": 10,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 16,
-            "professor_questions": 4,
-            "student_questions": 0,
-            "examples": 1
-        },
-        {
-            "minute": 17,
-            "professor_questions": 3,
-            "student_questions": 0,
-            "examples": 0
-        },
-        {
-            "minute": 18,
-            "professor_questions": 0,
-            "student_questions": 0,
-            "examples": 0
-        }
+        {"minute": 0, "professor_questions": 0, "student_questions": 0, "examples": 2},
+        {"minute": 1, "professor_questions": 1, "student_questions": 0, "examples": 3},
+        {"minute": 2, "professor_questions": 0, "student_questions": 0, "examples": 4},
+        {"minute": 3, "professor_questions": 0, "student_questions": 0, "examples": 5},
+        {"minute": 4, "professor_questions": 2, "student_questions": 1, "examples": 1},
+        {"minute": 5, "professor_questions": 1, "student_questions": 1, "examples": 1},
+        {"minute": 6, "professor_questions": 1, "student_questions": 1, "examples": 2},
+        {"minute": 7, "professor_questions": 1, "student_questions": 1, "examples": 1},
+        {"minute": 8, "professor_questions": 0, "student_questions": 1, "examples": 3},
+        {"minute": 9, "professor_questions": 1, "student_questions": 2, "examples": 0},
+        {"minute": 10, "professor_questions": 0, "student_questions": 1, "examples": 0},
+        {"minute": 11, "professor_questions": 2, "student_questions": 1, "examples": 0},
+        {"minute": 12, "professor_questions": 1, "student_questions": 0, "examples": 1},
+        {"minute": 13, "professor_questions": 3, "student_questions": 2, "examples": 0},
+        {"minute": 14, "professor_questions": 2, "student_questions": 1, "examples": 0},
+        {"minute": 15, "professor_questions": 2, "student_questions": 2, "examples": 0},
+        {"minute": 16, "professor_questions": 1, "student_questions": 0, "examples": 1},
+        {"minute": 17, "professor_questions": 1, "student_questions": 1, "examples": 0},
+        {"minute": 18, "professor_questions": 0, "student_questions": 1, "examples": 0}
     ],
     "talk_time": [
-        {
-            "minute": 0,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 1,
-            "professor_percentage": 0.8889,
-            "student_percentage": 0.1111
-        },
-        {
-            "minute": 2,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 3,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 4,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 5,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 6,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 7,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 8,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 9,
-            "professor_percentage": 1.0,
-            "student_percentage": 0.0
-        },
-        {
-            "minute": 10,
-            "professor_percentage": 0.0,
-            "student_percentage": 1.0
-        },
-        {
-            "minute": 11,
-            "professor_percentage": 0.7368,
-            "student_percentage": 0.2632
-        },
-        {
-            "minute": 12,
-            "professor_percentage": 0.8305,
-            "student_percentage": 0.1695
-        },
-        {
-            "minute": 13,
-            "professor_percentage": 0.6491,
-            "student_percentage": 0.3509
-        },
-        {
-            "minute": 14,
-            "professor_percentage": 0.7797,
-            "student_percentage": 0.2203
-        },
-        {
-            "minute": 15,
-            "professor_percentage": 0.7119,
-            "student_percentage": 0.2881
-        },
-        {
-            "minute": 16,
-            "professor_percentage": 0.8793,
-            "student_percentage": 0.1207
-        },
-        {
-            "minute": 17,
-            "professor_percentage": 0.8966,
-            "student_percentage": 0.1034
-        },
-        {
-            "minute": 18,
-            "professor_percentage": 0.0,
-            "student_percentage": 1.0
-        }
+        {"minute": 0, "professor_percentage": 87.0, "student_percentage": 0.0},
+        {"minute": 1, "professor_percentage": 68.89, "student_percentage": 11.11},
+        {"minute": 2, "professor_percentage": 90.0, "student_percentage": 0.0},
+        {"minute": 3, "professor_percentage": 100.0, "student_percentage": 0.0},
+        {"minute": 4, "professor_percentage": 54.0, "student_percentage": 12.0},
+        {"minute": 5, "professor_percentage": 60.0, "student_percentage": 14.0},
+        {"minute": 6, "professor_percentage": 80.0, "student_percentage": 10.0},
+        {"minute": 7, "professor_percentage": 77.0, "student_percentage": 12.0},
+        {"minute": 8, "professor_percentage": 90.0, "student_percentage": 4.0},
+        {"minute": 9, "professor_percentage": 61.0, "student_percentage": 30.0},
+        {"minute": 10, "professor_percentage": 22.0, "student_percentage": 60.0},
+        {"minute": 11, "professor_percentage": 73.68, "student_percentage": 26.32},
+        {"minute": 12, "professor_percentage": 83.05, "student_percentage": 16.95},
+        {"minute": 13, "professor_percentage": 64.91, "student_percentage": 35.09},
+        {"minute": 14, "professor_percentage": 77.97, "student_percentage": 22.03},
+        {"minute": 15, "professor_percentage": 71.19, "student_percentage": 28.81},
+        {"minute": 16, "professor_percentage": 87.93, "student_percentage": 12.07},
+        {"minute": 17, "professor_percentage": 89.66, "student_percentage": 10.34},
+        {"minute": 18, "professor_percentage": 0.0, "student_percentage": 100.0}
     ]
 }
