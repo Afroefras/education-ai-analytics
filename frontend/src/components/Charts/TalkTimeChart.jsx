@@ -5,10 +5,10 @@ const TalkTimeChart = ({ data = [] }) => {
     return <p className="text-gray-500">No talk time data available</p>;
   }
 
-  // Lighter blue color palette
+  // Color palette
   const colors = {
-    student: '#60a5fa',  // blue-300 (lighter)
-    professor: '#93c5fd' // blue-500 (lighter)
+    darkBlue: '#60a5fa',  // Darker blue
+    lightBlue: '#93c5fd' // Lighter blue
   };
   
   const textColor = '#414141';
@@ -56,32 +56,25 @@ const TalkTimeChart = ({ data = [] }) => {
               color: textColor
             }}
           />
-          <Legend 
-            formatter={(value) => (
-              <span style={{ color: textColor }}>
-                {value === 'professor_percentage' ? 'Professor' : 'Students'}
-              </span>
-            )}
-            wrapperStyle={{ color: textColor }}
-          />
+          <Legend wrapperStyle={{ color: textColor }} />
           <Area 
             type="monotone" 
-            dataKey="student_percentage" 
-            stroke={colors.student}
-            fill={colors.student}
-            fillOpacity={0.5}
-            name="Students"
+            dataKey="professor_percentage" 
+            stroke={colors.lightBlue}
+            fill={colors.lightBlue}
+            fillOpacity={0.1}
+            name="Professor"
             unit="%"
             strokeWidth={2}
             dot={false}
           />
           <Area 
             type="monotone" 
-            dataKey="professor_percentage" 
-            stroke={colors.professor}
-            fill={colors.professor}
-            fillOpacity={0.1}
-            name="Professor"
+            dataKey="student_percentage" 
+            stroke={colors.darkBlue}
+            fill={colors.darkBlue}
+            fillOpacity={0.5}
+            name="Students"
             unit="%"
             strokeWidth={2}
             dot={false}
