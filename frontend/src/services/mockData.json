@@ -1,21 +1,21 @@
 {
     "top_concepts": [
-        {"concept": "AI for Teaching", "frequency": 5},
-        {"concept": "Teaching Practice Analysis", "frequency": 4},
-        {"concept": "Data-driven Improvement", "frequency": 4},
-        {"concept": "Professor Self-Assessment", "frequency": 3},
-        {"concept": "Large Language Models (LLMs)", "frequency": 3},
-        {"concept": "Real-time Metrics", "frequency": 2},
-        {"concept": "Teacher Empowerment", "frequency": 2},
+        {"concept": "Professor", "frequency": 5},
+        {"concept": "Reflection", "frequency": 4},
+        {"concept": "Data", "frequency": 4},
+        {"concept": "Tools", "frequency": 3},
+        {"concept": "Large Language Models", "frequency": 3},
+        {"concept": "Metrics", "frequency": 2},
+        {"concept": "Empowerment", "frequency": 2},
         {"concept": "Pedagogical Growth", "frequency": 2},
         {"concept": "Class Rhythm", "frequency": 1},
         {"concept": "Continuous Improvement", "frequency": 1}
     ],
     "teaching_style": {
-        "questioning": 0.002022,
-        "correcting": 0.000315,
-        "explanation": 0.006562,
-        "encouraging": 0.001102
+        "questioning": 0.0335,
+        "correcting": 0.0491,
+        "explanation": 0.7934,
+        "encouraging": 0.124
     },
     "questions_examples": [
         {"minute": 0, "professor_questions": 0, "student_questions": 0, "examples": 2},
