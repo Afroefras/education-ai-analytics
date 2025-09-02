@@ -1,0 +1,330 @@
+{
+    "0": {
+      "concepts": [
+        "objetivo de inversión",
+        "tolerancia al riesgo",
+        "diversificación",
+        "activo financiero",
+        "herramienta de markowitz"
+      ],
+      "professor_questions_count": "4",
+      "professor_questions": [
+        {
+          "question": "¿cómo van a empezar su proyecto?",
+          "answer": "Es más que nada compartiendo qué tipo de objetivos van a tener."
+        },
+        {
+          "question": "¿Cuál es el tiempo?",
+          "answer": "Los estudiantes deben definirlo según sus objetivos (ej. casa en 10-15 años, viaje en 1-2 años)."
+        },
+        {
+          "question": "¿Cuál es la tolerancia que tienen al riesgo?",
+          "answer": "Esto quiere decir cuánto van a poner en renta fija, en renta variable, en los fondos de inversión, en los inmuebles, que son las fibras u otras."
+        },
+        {
+          "question": "¿Ustedes también van a ser mixtos?",
+          "answer": ""
+        }
+      ],
+      "student_questions_count": "0",
+      "student_questions": [],
+      "examples_count": "3",
+      "examples": [
+        "Objetivos de inversión: jubilación (20-30 años), comprar casa (10-15 años), viaje (1-2 años).",
+        "Asignación de capital en criptomonedas (alto riesgo): 10% del total.",
+        "Uso de la herramienta de Markowitz para diversificar y obtener ganancias."
+      ],
+      "talk_time": {
+        "professor": "02:45",
+        "students": "00:05"
+      },
+      "teaching_style": {
+        "questioning": 0.15,
+        "correcting": 0,
+        "explanation": 0.85,
+        "encouraging": 0
+      }
+    },
+    "3": {
+      "concepts": [
+        "sector de inversión",
+        "etf",
+        "estrategia de inversión",
+        "perfil de inversionista",
+        "asignación de activo"
+      ],
+      "professor_questions_count": "1",
+      "professor_questions": [
+        {
+          "question": "¿Qué porcentaje de tu cartera vas a destinar a cada activo?",
+          "answer": "Aquí les puse un pequeño ejemplo de cómo divido mis 1000 pesos en el rubro de la energía, servicio de comunicación, consumo básico, discrecional, etcétera."
+        }
+      ],
+      "student_questions_count": "0",
+      "student_questions": [],
+      "examples_count": "3",
+      "examples": [
+        "Sectores de inversión: consumo (Starbucks), industrial (IEnova), salud (Genomma Lab).",
+        "División de 1000 pesos en diferentes rubros (energía, comunicación, etc.).",
+        "Perfiles de inversionista con asignación de activos (conservador, moderado, agresivo)."
+      ],
+      "talk_time": {
+        "professor": "03:00",
+        "students": "00:00"
+      },
+      "teaching_style": {
+        "questioning": 0.02,
+        "correcting": 0,
+        "explanation": 0.95,
+        "encouraging": 0.03
+      }
+    },
+    "6": {
+      "concepts": [],
+      "professor_questions_count": "0",
+      "professor_questions": [],
+      "student_questions_count": "0",
+      "student_questions": [],
+      "examples_count": "0",
+      "examples": [],
+      "talk_time": {
+        "professor": "00:00",
+        "students": "00:00"
+      },
+      "teaching_style": {
+        "questioning": 0,
+        "correcting": 0,
+        "explanation": 0,
+        "encouraging": 0
+      }
+    },
+    "9": {
+      "concepts": [
+        "portafolio indizado",
+        "formación de equipo",
+        "portafolio patrimonial"
+      ],
+      "professor_questions_count": "5",
+      "professor_questions": [
+        {
+          "question": "quisiera saber si alcanzaron a leer este archivo.",
+          "answer": ""
+        },
+        {
+          "question": "quiero que me digan si tienen alguna duda para presentar su proyecto.",
+          "answer": "Miss, si tenemos dudas mientras lo estamos haciendo, ¿le podemos mandar mensaje?"
+        },
+        {
+          "question": "¿me lo pueden decir?",
+          "answer": "Sí, miss. De nuestro equipo vamos a ser las cuatro: Melissa, Jessica, Caro y yo."
+        },
+        {
+          "question": "¿el siguiente equipo?",
+          "answer": ""
+        },
+        {
+          "question": "¿Quién será el siguiente equipo, muchachos?",
+          "answer": ""
+        }
+      ],
+      "student_questions_count": "1",
+      "student_questions": [
+        {
+          "question": "Miss, si tenemos dudas mientras lo estamos haciendo, ¿le podemos mandar mensaje?",
+          "answer": "Sí."
+        }
+      ],
+      "examples_count": "1",
+      "examples": [
+        "El archivo compartido como ejemplo de portafolio indizado con fórmulas."
+      ],
+      "talk_time": {
+        "professor": "01:45",
+        "students": "00:20"
+      },
+      "teaching_style": {
+        "questioning": 0.15,
+        "correcting": 0,
+        "explanation": 0.8,
+        "encouraging": 0.05
+      }
+    },
+    "12": {
+      "concepts": [
+        "formación de equipo",
+        "logística de presentación",
+        "exposición de proyecto"
+      ],
+      "professor_questions_count": "9",
+      "professor_questions": [
+        {
+          "question": "¿El tercer equipo, cuál es o quiénes son?",
+          "answer": "Emiliano. Eduardo y... Nuño, Diego."
+        },
+        {
+          "question": "¿Sí les va a cumplir Diego?",
+          "answer": "Esperemos que sí."
+        },
+        {
+          "question": "¿El siguiente equipo?",
+          "answer": "Andrea y Andrea."
+        },
+        {
+          "question": "¿Quién más falta?",
+          "answer": "Maestra, nosotros somos Marta y yo, estamos con Juan Diego y con Mariana."
+        },
+        {
+          "question": "Creo que ya son todos, ¿verdad?",
+          "answer": ""
+        },
+        {
+          "question": "¿De acuerdo?",
+          "answer": ""
+        },
+        {
+          "question": "¿Dudas, comentarios, propuestas?",
+          "answer": "No, miss. Si surgen dudas mientras lo hacemos, le mandamos mensaje por Teams."
+        },
+        {
+          "question": "¿Ana Camila?",
+          "answer": "Sí está."
+        },
+        {
+          "question": "¿Andrea Flores?",
+          "answer": ""
+        }
+      ],
+      "student_questions_count": "2",
+      "student_questions": [
+        {
+          "question": "¿cómo se llama? Nuño, Diego.",
+          "answer": ""
+        },
+        {
+          "question": "¿Va a hacer la rifa de los números para ver quién expone primero?",
+          "answer": "Sí, o si ustedes se quieren proponer, no tengo problema."
+        }
+      ],
+      "examples_count": "0",
+      "examples": [],
+      "talk_time": {
+        "professor": "02:00",
+        "students": "00:45"
+      },
+      "teaching_style": {
+        "questioning": 0.4,
+        "correcting": 0,
+        "explanation": 0.56,
+        "encouraging": 0.04
+      }
+    },
+    "15": {
+      "concepts": [
+        "pase de lista",
+        "recursos adicionales",
+        "fecha de entrega"
+      ],
+      "professor_questions_count": "16",
+      "professor_questions": [
+        {
+          "question": "¿Andrea Vianney?",
+          "answer": "Aquí está Andrea con nosotras, presente, maestra."
+        },
+        {
+          "question": "¿Antonio Damián?",
+          "answer": ""
+        },
+        {
+          "question": "¿Ariel?",
+          "answer": ""
+        },
+        {
+          "question": "¿Carolina?",
+          "answer": "No la veo."
+        },
+        {
+          "question": "¿Eduardo?",
+          "answer": "Aquí estoy, miss."
+        },
+        {
+          "question": "¿Hugo?",
+          "answer": "Presente."
+        },
+        {
+          "question": "¿Jessica?",
+          "answer": "Presente."
+        },
+        {
+          "question": "¿José Emiliano?",
+          "answer": ""
+        },
+        {
+          "question": "José Emiliano, ¿no está?",
+          "answer": ""
+        },
+        {
+          "question": "¿Juan Diego?",
+          "answer": "Tampoco lo veo."
+        },
+        {
+          "question": "¿Juan Pablo?",
+          "answer": ""
+        },
+        {
+          "question": "¿Marta?",
+          "answer": "Presente, soy yo, maestra."
+        },
+        {
+          "question": "¿Melissa Sofía?",
+          "answer": "Presente, miss."
+        },
+        {
+          "question": "les pedí el trabajo para el miércoles como al mediodía, ¿verdad?",
+          "answer": ""
+        },
+        {
+          "question": "¿Tienen alguna duda, propuesta o sugerencia?",
+          "answer": "No, miss."
+        },
+        {
+          "question": "¿De acuerdo?",
+          "answer": "Sí, maestra, muchas gracias."
+        }
+      ],
+      "student_questions_count": "0",
+      "student_questions": [],
+      "examples_count": "1",
+      "examples": [
+        "Una presentación de otro grupo como muestra de un trabajo completo."
+      ],
+      "talk_time": {
+        "professor": "02:20",
+        "students": "00:35"
+      },
+      "teaching_style": {
+        "questioning": 0.41,
+        "correcting": 0,
+        "explanation": 0.44,
+        "encouraging": 0.15
+      }
+    },
+    "18": {
+      "concepts": [],
+      "professor_questions_count": "0",
+      "professor_questions": [],
+      "student_questions_count": "0",
+      "student_questions": [],
+      "examples_count": "0",
+      "examples": [],
+      "talk_time": {
+        "professor": "00:00",
+        "students": "00:02"
+      },
+      "teaching_style": {
+        "questioning": 0,
+        "correcting": 0,
+        "explanation": 0,
+        "encouraging": 0
+      }
+    }
+  }
