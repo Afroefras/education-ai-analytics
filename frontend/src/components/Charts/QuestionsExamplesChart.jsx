@@ -8,7 +8,7 @@ const QuestionsExamplesChart = ({ data = [] }) => {
   // Color palette
   const colors = {
     professor: '#3b82f6', // blue-500 (lighter)
-    student: '#60a5fa'   // blue-400 (lighter)
+    student: '#9b83e6'   // blue-400 (lighter)
   };
   
   const textColor = '#414141';
