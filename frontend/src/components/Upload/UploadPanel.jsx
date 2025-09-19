@@ -27,7 +27,7 @@ export default function UploadPage({ onDataReceived }) {
   return (
     <div className="flex flex-col items-center justify-center h-full">
       <label className="px-6 py-3 text-white bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700">
-        {loading ? "Procesando..." : "Subir documento"}
+        {loading ? "Loading..." : "Upload transcript"}
         <input type="file" className="hidden" onChange={handleFileChange} />
       </label>
     </div>
